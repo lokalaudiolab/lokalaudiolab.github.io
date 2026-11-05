@@ -1,5 +1,42 @@
 {
   "version": 1,
-  "updated_at": null,
-  "sounds": []
+  "updated_at": "2026-11-05T17:22:11+00:00",
+  "sounds": [
+    {
+      "id": "free-42071265691-1-short_tension_tick_01",
+      "title": "Short Tension Tick",
+      "context": "shortform",
+      "description": "Dry tick to pace short-form tension or countdown",
+      "duration_seconds": 0.5,
+      "date_wib": "2026-11-06",
+      "url": "library/audio/2026-11-06/42071265691-1/short_tension_tick_01.wav",
+      "sha256": "25ed4e772239c15569795f96dfeccf8488d7417be5c140b537f0f55e3a4fd8ba",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-42071265691-1"
+    },
+    {
+      "id": "free-42071265691-1-drama_radio_tune_01",
+      "title": "Drama Radio Tune",
+      "context": "audio_drama",
+      "description": "Stylized radio dial/noise cue for audio drama",
+      "duration_seconds": 1.4,
+      "date_wib": "2026-11-06",
+      "url": "library/audio/2026-11-06/42071265691-1/drama_radio_tune_01.wav",
+      "sha256": "a103f7d9ceb9a88590b844100851969f5661d0ecc588d39531d32edb3eb2e9f8",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-42071265691-1"
+    },
+    {
+      "id": "free-42071265691-1-comedy_fail_01",
+      "title": "Comedy Fail",
+      "context": "comedy",
+      "description": "Descending synth joke/fail response",
+      "duration_seconds": 1.15,
+      "date_wib": "2026-11-06",
+      "url": "library/audio/2026-11-06/42071265691-1/comedy_fail_01.wav",
+      "sha256": "8870e8fbb2258b06cb149b2cdc1543d5c6299094da3775035048de25255d9e2c",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-42071265691-1"
+    }
+  ]
 }
