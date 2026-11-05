@@ -203,6 +203,7 @@
     const delay = Math.max(0, options.delay || 0);
     stopSound();
     const ctx = getOrCreateContext();
+    window.dispatchEvent(new Event("lal:internal-play"));
     await ctx.resume();
     // Another click may have superseded the gesture while resume was pending.
     if (activeSource) stopSound();
@@ -604,6 +605,7 @@
   }
 
   function bindEvents() {
+    window.addEventListener("lal:external-play", stopSound);
     $$("[data-play]").forEach((button) => {
       button.addEventListener("click", () => toggleSound(button.dataset.play));
     });
