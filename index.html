@@ -15,6 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css?v=2">
   <script src="./app.js?v=2" defer></script>
+  <script src="./free-library.js?v=1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Lewati navigasi</a>
@@ -184,6 +185,43 @@
           <article class="sound-row reveal" data-sound="commercial" data-category="commercial"><span class="sound-index mono">04</span><button class="sound-play" data-play="commercial" aria-label="Putar product reveal">▶</button><div class="sound-details"><h3>Product Reveal</h3><p>Brand motion · Sweep · Airy accent</p></div><canvas class="sound-wave" data-wave="commercial" aria-hidden="true"></canvas><span class="sound-duration mono">01:80</span><button class="sound-download" data-download="commercial" aria-label="Unduh WAV product reveal">↓ <span>WAV</span></button></article>
           <article class="sound-row reveal" data-sound="bonk" data-category="comedy"><span class="sound-index mono">05</span><button class="sound-play" data-play="bonk" aria-label="Putar comedy bonk">▶</button><div class="sound-details"><h3>Comedy Bonk</h3><p>Slapstick · Spring · Quick response</p></div><canvas class="sound-wave" data-wave="bonk" aria-hidden="true"></canvas><span class="sound-duration mono">00:60</span><button class="sound-download" data-download="bonk" aria-label="Unduh WAV comedy bonk">↓ <span>WAV</span></button></article>
           <article class="sound-row reveal" data-sound="drone" data-category="audio_drama"><span class="sound-index mono">06</span><button class="sound-play" data-play="drone" aria-label="Putar mystery drone">▶</button><div class="sound-details"><h3>Mystery Drone</h3><p>Atmosphere · Suspense · Low texture</p></div><canvas class="sound-wave" data-wave="drone" aria-hidden="true"></canvas><span class="sound-duration mono">03:20</span><button class="sound-download" data-download="drone" aria-label="Unduh WAV mystery drone">↓ <span>WAV</span></button></article>
+        </div>
+        <div class="daily-free" id="dailyFreeSection" aria-labelledby="dailyFreeTitle">
+          <div class="daily-free-header">
+            <div>
+              <span class="eyebrow"><span class="section-number">FREE /</span> NEW FROM PRODUCTION</span>
+              <h3 id="dailyFreeTitle">Fresh from the lab<span class="accent">.</span></h3>
+              <p>Sound effects gratis dari batch produksi Lokal Audio Lab. Setiap drop berasal dari audio asli yang lolos pemeriksaan teknis dan screening sinyal otomatis.</p>
+            </div>
+            <div class="daily-free-counter"><span id="dailyFreeCount">00</span><small class="mono">FREE WAV</small></div>
+          </div>
+          <div class="daily-free-toolbar">
+            <label class="daily-free-search">
+              <span class="sr-only">Cari suara gratis</span>
+              <span aria-hidden="true">⌕</span>
+              <input id="dailyFreeSearch" type="search" placeholder="Search free sounds..." autocomplete="off">
+            </label>
+            <label class="daily-free-select-wrap">
+              <span class="sr-only">Filter kategori free sound</span>
+              <select id="dailyFreeCategory" aria-label="Filter free SFX">
+                <option value="all">All categories</option>
+                <option value="cinematic">Cinematic</option>
+                <option value="gaming">Game audio</option>
+                <option value="commercial">Commercial</option>
+                <option value="comedy">Comedy</option>
+                <option value="audio_drama">Audio drama</option>
+                <option value="shortform">Short-form</option>
+              </select>
+            </label>
+          </div>
+          <div class="daily-free-list" id="dailyFreeList" role="list" aria-live="polite">
+            <p class="daily-free-empty">Menghubungkan katalog free demo...</p>
+          </div>
+          <button id="dailyFreeMore" class="daily-free-more" type="button" hidden>Show more free sounds ↘</button>
+          <div class="daily-free-footnote">
+            <span class="mono" id="dailyFreeStatus" role="status">Menyiapkan katalog...</span>
+            <p>Free demos bersifat eksperimental dan belum melalui persetujuan kreatif manusia. Gratis untuk dicoba dalam proyek edit personal atau komersial. Tidak untuk dijual ulang atau dibagikan sebagai paket WAV mandiri.</p>
+          </div>
         </div>
         <div class="library-footer reveal">
           <span class="mono">ORIGINAL SYNTHESIS / NO THIRD-PARTY AUDIO</span>
