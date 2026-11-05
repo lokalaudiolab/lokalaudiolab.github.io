@@ -27,7 +27,7 @@ function resetPlayer(){
 }
 function setStatus(value){status.textContent=value;}
 function valid(item){
-  return item && typeof item.id==="string" && /^[a-z0-9-]{4,100}$/.test(item.id) &&
+  return item && typeof item.id==="string" && /^[a-z0-9_-]{4,110}$/.test(item.id) &&
     typeof item.url==="string" && WAV_PATH.test(item.url) &&
     typeof item.title==="string" && item.title.length<=70 &&
     typeof item.description==="string" && item.description.length<=220 &&
