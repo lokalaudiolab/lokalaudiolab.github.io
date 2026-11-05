@@ -9,7 +9,7 @@ const item={
   title:"Comedy Bonk",
   context:"comedy",
   description:"Original procedural bonk accent",
-  duration_seconds:0.3,
+  duration_seconds:3.0,
   date_wib:"2026-11-06",
   tier:"FREE_DEMO",
   url:"library/audio/2026-11-06/42071265691-1/comedy_bonk_01.wav",
@@ -17,7 +17,7 @@ const item={
   source_release:"sfx-42071265691-1"
 };
 function wav(){
-  const n=14400,buf=Buffer.alloc(44+n*2);
+  const n=144000,buf=Buffer.alloc(44+n*2);
   buf.write("RIFF",0);buf.writeUInt32LE(36+n*2,4);buf.write("WAVE",8);
   buf.write("fmt ",12);buf.writeUInt32LE(16,16);buf.writeUInt16LE(1,20);
   buf.writeUInt16LE(1,22);buf.writeUInt32LE(48000,24);buf.writeUInt32LE(96000,28);
@@ -28,7 +28,7 @@ function wav(){
 (async()=>{
   const browser=await chromium.launch({executablePath:chrome,headless:true,args:["--no-sandbox","--disable-dev-shm-usage","--autoplay-policy=no-user-gesture-required"]});
   try{
-    const page=await browser.newPage({viewport:{width:390,height:844},acceptDownloads:true});
+    const page=await browser.newPage({viewport:{width:390,height:844},acceptDownloads:true,reducedMotion:'reduce'});
     const errors=[];page.on("pageerror",e=>errors.push(e.message));
     await page.route("**/library/catalog.json",route=>route.fulfill({
       status:200,contentType:"application/json",body:JSON.stringify({version:1,sounds:[item]})
@@ -49,9 +49,8 @@ function wav(){
     await page.locator("#dailyFreeCategory").selectOption("comedy");
     assert.equal(await page.locator(".daily-free-row").count(),1);
     await page.locator(".daily-free-play").click();
-    await page.waitForTimeout(80);
+    await page.waitForFunction(() => document.querySelector(".daily-free-play")?.textContent==="Ⅱ", {timeout:2000});
     assert.match(await page.locator(".daily-free-row").getAttribute("class"),/is-playing/);
-    assert.match(await page.locator(".daily-free-play").textContent(),/Ⅱ/);
     const dl=page.waitForEvent("download");
     await page.locator(".daily-free-download").click();
     assert.equal((await dl).suggestedFilename(),"comedy_bonk_01.wav");
