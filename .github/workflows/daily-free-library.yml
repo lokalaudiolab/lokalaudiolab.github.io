@@ -1,0 +1,101 @@
+name: Daily free SFX sync and GitHub Pages deployment
+
+on:
+  schedule:
+    - cron: '30 5 * * *' # 12:30 WIB, after 09:00 WIB production
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - index.html
+      - styles.css
+      - app.js
+      - free-library.js
+      - site_library_sync.py
+      - tests/test_site_library_sync.py
+      - .github/workflows/daily-free-library.yml
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: lokal-audio-public-pages
+  cancel-in-progress: false
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout public site
+        uses: actions/checkout@v4
+      - name: Verify safe free import logic
+        run: |
+          python3 -m unittest discover -s tests -p 'test_site_library_sync.py' -v
+      - name: Import new private-producer FREE packs only
+        if: github.event_name != 'push'
+        env:
+          SFX_SOURCE_READ_TOKEN: ${{ secrets.SFX_SOURCE_READ_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "$SFX_SOURCE_READ_TOKEN" ]; then
+            echo '### Free SFX sync: NOT CONFIGURED' >> "$GITHUB_STEP_SUMMARY"
+            echo 'Add the fine-grained read-only production token as SFX_SOURCE_READ_TOKEN in this public website repository Secrets.' >> "$GITHUB_STEP_SUMMARY"
+          else
+            export GH_TOKEN="$SFX_SOURCE_READ_TOKEN"
+            SOURCE_REPO='bulmue-dot/lokal-audio-lab'
+            mkdir -p /tmp/lal-free-import
+            mapfile -t TAGS < <(
+              gh release list --repo "$SOURCE_REPO" --limit 35 --json tagName --jq '.[].tagName' |
+              grep -E '^sfx-[0-9]+-[0-9]+$' | head -n 20 || true
+            )
+            IMPORTED=0
+            for TAG in "${TAGS[@]}"; do
+              if ! gh release view "$TAG" --repo "$SOURCE_REPO" --json assets --jq '.assets[].name' | grep -Fxq 'free-demo-pack.zip'; then
+                continue
+              fi
+              ASSET_DIR="/tmp/lal-free-import/$TAG"
+              mkdir -p "$ASSET_DIR"
+              gh release download "$TAG" --repo "$SOURCE_REPO" \
+                --pattern 'free-demo-pack.zip' --pattern 'free-demo-catalog.json' --dir "$ASSET_DIR"
+              python3 site_library_sync.py --assets "$ASSET_DIR" --library library --tag "$TAG"
+              IMPORTED=$((IMPORTED + 1))
+            done
+            git add library/ || true
+            if ! git diff --cached --quiet; then
+              git config user.name 'Lokal Audio Lab Automation'
+              git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+              git commit -m 'Publish QC-screened free SFX demo drops'
+              git push origin HEAD:main
+              echo '### Free SFX sync: catalog updated and committed' >> "$GITHUB_STEP_SUMMARY"
+            else
+              echo '### Free SFX sync: no new public sounds to import' >> "$GITHUB_STEP_SUMMARY"
+            fi
+            echo "Checked $IMPORTED eligible SFX release(s)" >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Prepare minimal public site artifact
+        run: |
+          mkdir -p site-dist
+          cp index.html styles.css app.js free-library.js site-dist/
+          touch site-dist/.nojekyll
+          if [ -d library ]; then cp -r library site-dist/; fi
+          test -s site-dist/index.html
+          test -s site-dist/free-library.js
+          echo 'Static site and public free-audio directory prepared'
+      - name: Upload public Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site-dist
+      - name: Deploy site and audio together
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Report final website URL
+        run: |
+          echo '### Free SFX website published' >> "$GITHUB_STEP_SUMMARY"
+          echo 'https://lokalaudiolab.github.io/#dailyFreeSection' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Only selected FREE_DEMO WAVs are made public; private master ZIP stays private.' >> "$GITHUB_STEP_SUMMARY"
