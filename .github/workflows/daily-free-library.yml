@@ -36,6 +36,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Verify safe free import logic
         run: |
+          node --check app.js
+          node --check free-library.js
           python3 -m unittest discover -s tests -p 'test_site_library_sync.py' -v
       - name: Import new private-producer FREE packs only
         if: github.event_name != 'push'
@@ -49,6 +51,10 @@ jobs:
           else
             export GH_TOKEN="$SFX_SOURCE_READ_TOKEN"
             SOURCE_REPO='bulmue-dot/lokal-audio-lab'
+            gh api "repos/$SOURCE_REPO/releases?per_page=1" > /dev/null || {
+              echo "::error::Read-only token cannot access the private SFX producer repo."
+              exit 1
+            }
             mkdir -p /tmp/lal-free-import
             mapfile -t TAGS < <(
               gh release list --repo "$SOURCE_REPO" --limit 35 --json tagName --jq '.[].tagName' |
