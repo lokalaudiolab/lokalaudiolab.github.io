@@ -87,7 +87,13 @@ def create_manifest(asset_dir,output_root,tag,expected_day):
             "caption":caption,"video":video,"provider":"Metricool",
             "is_ai_generated":True,
             "canva_video_rendered":bool(queued.get("canva_video_rendered",False)),
-            "auto_publish_authorized":expected_day>="2026-11-07"}
+            # Auto-post only actual Canva-designed, QC-verified outputs.
+            # The procedural fallback remains a private review candidate.
+            "auto_publish_authorized":(
+                expected_day>="2026-11-07"
+                and queued.get("canva_video_rendered") is True
+                and bool(queued.get("canva_design_id"))
+            )}
     m=output_root/"social"/"latest.json"
     m.parent.mkdir(parents=True,exist_ok=True)
     m.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
