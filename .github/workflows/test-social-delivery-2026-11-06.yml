@@ -1,0 +1,60 @@
+name: Isolated public video delivery for LAL 14:10 test
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/test-social-delivery-2026-11-06.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  stage:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - name: Verify one-day isolation and download validated private source
+        env:
+          GH_TOKEN: ${{ secrets.SFX_SOURCE_READ_TOKEN }}
+        run: |
+          set -euo pipefail
+          test "$(TZ=Asia/Jakarta date +%F)" = '2026-11-06'
+          test -n "$GH_TOKEN"
+          mkdir -p /tmp/test-social
+          gh release download 'marketing-2026-11-06-test-1410' --repo 'bulmue-dot/lokal-audio-lab' --dir /tmp/test-social
+      - name: Verify real Canva design, QC, SHA, and file safety
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json,hashlib
+          p=Path('/tmp/test-social')
+          q=json.loads((p/'publish-queue.json').read_text())
+          qc=json.loads((p/'creative-qc.json').read_text())
+          assert q['run_date_wib']=='2026-11-06'
+          assert q['status']=='REVIEW_REQUIRED'
+          assert qc['summary']['objective_pass'] is True
+          assert qc['approval']=='PENDING'
+          for n in ('tiktok','instagram'):
+            row=q['assets'][n]
+            assert row['canva_video_rendered'] is True and row['canva_design_id']
+            assert row['quality_gate']=='PASS'
+            assert qc['platforms'][n]['objective_checks']=='PASS'
+            assert not qc['platforms'][n]['warnings']
+            f=p/(n+'.mp4')
+            assert f.stat().st_size>100000
+            assert hashlib.sha256(f.read_bytes()).hexdigest()==row['video_sha256']
+            print('QC PASS Canva video',n,f.stat().st_size)
+          PY
+      - name: Release only final marketing videos on public CDN, never private masters
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          TAG='social-test-2026-11-06-1410'
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo 'Already released, no duplicate uploads'
+            exit 0
+          fi
+          gh release create "$TAG" /tmp/test-social/tiktok.mp4 /tmp/test-social/instagram.mp4 \
+            --title 'Lokal Audio Lab 2026-11-06 test video delivery' \
+            --notes 'Two QC-verified final Canva-designed social videos for an explicitly authorized one-time test. Source audio and private production assets are not included.'
+          echo "https://github.com/$GH_REPO/releases/tag/$TAG" >> "$GITHUB_STEP_SUMMARY"
