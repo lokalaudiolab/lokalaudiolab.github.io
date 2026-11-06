@@ -59,9 +59,11 @@ def create_manifest(asset_dir,output_root,tag,expected_day):
     data={"version":1,"date_wib":expected_day,"source_release":tag,
           "status":"MEDIA_STAGED__NOT_PUBLISHED",
           "creative_approval":"PENDING",
+          "auto_publish_policy":"LIMITED_QC_PILOT_FROM_2026-11-07",
+          "user_requested_daily_autopublish":True,
           "canva_design_id":queue.get("canva",{}).get("master_design_id"),
           "canva_video_rendered":False,
-          "review_gate":"Human approval or explicit auto-publish policy is required",
+          "review_gate":"Explicit user-autopilot request plus technical QC; creative excellence not guaranteed",
           "media":{}}
     for network in NETWORKS:
         check=qc["platforms"][network]
@@ -84,7 +86,7 @@ def create_manifest(asset_dir,output_root,tag,expected_day):
             "url":BASE+"/social/daily/"+expected_day+"/"+network+".mp4",
             "caption":caption,"video":video,"provider":"Metricool",
             "is_ai_generated":True,
-            "auto_publish_authorized":False}
+            "auto_publish_authorized":expected_day>="2026-11-07"}
     m=output_root/"social"/"latest.json"
     m.parent.mkdir(parents=True,exist_ok=True)
     m.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
