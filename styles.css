@@ -142,3 +142,25 @@ button{color:inherit}canvas{display:block}h1,h2,h3,p{margin-top:0}h1,h2,h3{font-
 .daily-free-details p{font-size:10px}
 .daily-free-tags span{font-size:8px;padding:2px 5px}
 }
+
+/* Service inquiries: free SFX remains the entrypoint; paid human audio work is visible. */
+.services{background:#101820;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.services-heading{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:36px}
+.services-heading>div{flex:1}.services-heading>p{max-width:380px;font-size:13px;line-height:1.85;margin:0}
+.services-heading .display-title{margin:22px 0 0}.services-accent{color:var(--lime)}
+.services-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.services-card{min-height:385px;border:1px solid rgba(189,255,104,.20);padding:clamp(25px,3vw,43px);background:linear-gradient(140deg,#18212a,#101820);display:flex;flex-direction:column}
+.services-card-kicker{font-size:10px;color:var(--lime);letter-spacing:.09em}
+.services-card h3{font-size:clamp(32px,3.8vw,59px);line-height:1.08;letter-spacing:-.06em;margin:28px 0 19px}
+.services-card>p{font-size:13px;line-height:1.85;max-width:470px}
+.services-card-bottom{margin-top:auto;padding-top:32px;border-top:1px solid var(--hair);display:flex;gap:15px;justify-content:space-between;align-items:end}
+.services-price-label{display:block;color:var(--dim);font-size:9px;margin-bottom:6px}
+.services-card-bottom strong{font-size:clamp(19px,2.2vw,28px);letter-spacing:-.05em}
+.services-card-bottom small{font-size:12px;color:var(--muted);font-weight:500;letter-spacing:0}
+.services-card-bottom a{display:inline-flex;align-items:center;white-space:nowrap;color:var(--lime);font:500 11px var(--mono);border-bottom:1px solid var(--lime);padding-bottom:7px}
+.services-card-bottom a:hover{color:#e1ffaf}
+.services-footer{display:flex;gap:40px;align-items:center;justify-content:space-between;padding-top:24px}
+.services-footer p{margin:0;max-width:690px;font-size:11px;line-height:1.8}
+.services-footer a{color:var(--lime);font:500 11px var(--mono);white-space:nowrap}
+@media(max-width:900px){.services-heading{display:block}.services-heading>p{margin-top:25px}.services-grid{grid-template-columns:1fr}.services-card{min-height:350px}.services-footer{flex-direction:column;align-items:flex-start;gap:16px}}
+@media(max-width:470px){.services-card-bottom{align-items:flex-start;flex-direction:column}.services-card{min-height:380px}.services-card h3{font-size:35px}.services-footer a{white-space:normal}}
