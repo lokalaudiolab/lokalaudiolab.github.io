@@ -36,7 +36,7 @@ class MediaStageTests(unittest.TestCase):
             site=Path(root)/"site"
             manifest=create_manifest(src,site,"marketing-2026-11-06","2026-11-06")
             self.assertEqual(manifest["status"],"MEDIA_STAGED__NOT_PUBLISHED")
-            self.assertFalse(manifest["media"]["tiktok"]["auto_publish_authorized"])
+            self.assertFalse(manifest["media"]["tiktok"]["auto_publish_authorized"])\n            self.assertEqual(manifest["auto_publish_policy"],"LIMITED_QC_PILOT_FROM_2026-11-07")
             self.assertTrue((site/"social/daily/2026-11-06/tiktok.mp4").exists())
             self.assertEqual(set(p.name for p in (site/"social/daily/2026-11-06").iterdir()),
                              {"tiktok.mp4","instagram.mp4"})
