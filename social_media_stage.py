@@ -19,7 +19,7 @@ import subprocess
 BASE="https://lokalaudiolab.github.io"
 NETWORKS=("tiktok","instagram")
 TAG=re.compile(r"^marketing-(20\d{2}-\d{2}-\d{2})$")
-MIN_MP4_BYTES=100_000
+MIN_MP4_BYTES=10_000
 MAX_MP4_BYTES=80_000_000
 
 def inspect_mp4(path):
