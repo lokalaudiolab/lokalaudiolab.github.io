@@ -150,6 +150,16 @@ jobs:
             export GH_TOKEN="$SFX_SOURCE_READ_TOKEN"
             SOURCE_REPO='bulmue-dot/lokal-audio-lab'
             if gh release view "$TAG" --repo "$SOURCE_REPO" >/dev/null 2>&1; then
+              mapfile -t ASSETS < <(gh release view "$TAG" --repo "$SOURCE_REPO" --json assets --jq '.assets[].name')
+              REQUIRED=(tiktok.mp4 instagram.mp4 tiktok.txt instagram.txt creative-qc.json publish-queue.json)
+              COMPLETE=true
+              for FILE in "${REQUIRED[@]}"; do
+                if ! printf '%s\\n' "${ASSETS[@]}" | grep -Fxq "$FILE"; then COMPLETE=false; fi
+              done
+              if [ "$COMPLETE" != true ]; then
+                echo "::warning::Same-day private marketing release predates publish-queue v3. Skipping social staging, leaving the main website unaffected."
+                echo "### Social media: same-day release missing validated publishing assets" >> "$GITHUB_STEP_SUMMARY"
+              else
               mkdir -p /tmp/lal-daily-social
               gh release download "$TAG" --repo "$SOURCE_REPO" \
                 --pattern 'tiktok.mp4' --pattern 'instagram.mp4' \
@@ -161,6 +171,7 @@ jobs:
               echo "### Social media: staged QC-passing files for $DATE_WIB" >> "$GITHUB_STEP_SUMMARY"
               echo "https://lokalaudiolab.github.io/social/latest.json" >> "$GITHUB_STEP_SUMMARY"
               echo 'Status: staged for review, not automatically posted by this Pages workflow.' >> "$GITHUB_STEP_SUMMARY"
+              fi
             else
               echo "### Social media: no fresh marketing release for $DATE_WIB; no old clip reused" >> "$GITHUB_STEP_SUMMARY"
             fi
