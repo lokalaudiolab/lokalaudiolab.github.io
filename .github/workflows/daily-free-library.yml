@@ -167,7 +167,7 @@ jobs:
               REQUIRED=(tiktok.mp4 instagram.mp4 tiktok.txt instagram.txt creative-qc.json publish-queue.json)
               COMPLETE=true
               for FILE in "${REQUIRED[@]}"; do
-                if ! printf '%s\\n' "${ASSETS[@]}" | grep -Fxq "$FILE"; then COMPLETE=false; fi
+                if ! printf '%s\n' "${ASSETS[@]}" | grep -Fxq "$FILE"; then COMPLETE=false; fi
               done
               if [ "$COMPLETE" != true ]; then
                 echo "::warning::Same-day private marketing release predates publish-queue v3. Skipping social staging, leaving the main website unaffected."
