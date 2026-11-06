@@ -1,7 +1,43 @@
 {
   "version": 1,
-  "updated_at": "2026-11-05T17:22:11+00:00",
+  "updated_at": "2026-11-06T03:46:51+00:00",
   "sounds": [
+    {
+      "id": "free-42152693523-1-short_tension_tick_01",
+      "title": "Short Tension Tick",
+      "context": "shortform",
+      "description": "Dry tick to pace short-form tension or countdown",
+      "duration_seconds": 0.5,
+      "date_wib": "2026-11-06",
+      "url": "library/audio/2026-11-06/42152693523-1/short_tension_tick_01.wav",
+      "sha256": "25ed4e772239c15569795f96dfeccf8488d7417be5c140b537f0f55e3a4fd8ba",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-42152693523-1"
+    },
+    {
+      "id": "free-42152693523-1-drama_mystery_drone_01",
+      "title": "Drama Mystery Drone",
+      "context": "audio_drama",
+      "description": "Low atmospheric suspense texture, synthetic not location Foley",
+      "duration_seconds": 2.5,
+      "date_wib": "2026-11-06",
+      "url": "library/audio/2026-11-06/42152693523-1/drama_mystery_drone_01.wav",
+      "sha256": "15e81170a7d28a964f58469767942d12958826baea52b3e8f04f56b7b44368f1",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-42152693523-1"
+    },
+    {
+      "id": "free-42152693523-1-ad_shimmer_01",
+      "title": "Ad Shimmer",
+      "context": "commercial",
+      "description": "Sparkly brand logo sparkle accent",
+      "duration_seconds": 1.4,
+      "date_wib": "2026-11-06",
+      "url": "library/audio/2026-11-06/42152693523-1/ad_shimmer_01.wav",
+      "sha256": "551386fb0446bf63d27d24fac1ffd4704d9c22a91b72443c633c09a2e132048b",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-42152693523-1"
+    },
     {
       "id": "free-42071265691-1-short_tension_tick_01",
       "title": "Short Tension Tick",
