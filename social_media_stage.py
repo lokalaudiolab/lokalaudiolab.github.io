@@ -18,7 +18,7 @@ import subprocess
 
 BASE="https://lokalaudiolab.github.io"
 NETWORKS=("tiktok","instagram")
-TAG=re.compile(r"^marketing-(20\d{2}-\d{2}-\d{2})$")
+TAG=re.compile(r"^marketing-(20\d{2}-\d{2}-\d{2})(?:-test-1410)?$")
 MIN_MP4_BYTES=10_000
 MAX_MP4_BYTES=80_000_000
 
@@ -48,6 +48,8 @@ def create_manifest(asset_dir,output_root,tag,expected_day):
     match=TAG.fullmatch(tag)
     if not match or match[1]!=expected_day or date.fromisoformat(expected_day).isoformat()!=expected_day:
         raise ValueError("Source release does not match current date")
+    if tag.endswith("-test-1410") and expected_day != "2026-11-06":
+        raise ValueError("Isolated 14:10 test release permitted only on 2026-11-06")
     qc=json.loads((asset_dir/"creative-qc.json").read_text(encoding="utf-8"))
     queue=json.loads((asset_dir/"publish-queue.json").read_text(encoding="utf-8"))
     if qc.get("approval")!="PENDING" or qc.get("summary",{}).get("objective_pass") is not True:
