@@ -62,7 +62,7 @@ def create_manifest(asset_dir,output_root,tag,expected_day):
           "auto_publish_policy":"LIMITED_QC_PILOT_FROM_2026-11-07",
           "user_requested_daily_autopublish":True,
           "canva_design_id":queue.get("canva",{}).get("master_design_id"),
-          "canva_video_rendered":False,
+          "canva_video_rendered":all(bool(queue["assets"][n].get("canva_video_rendered")) for n in NETWORKS),
           "review_gate":"Explicit user-autopilot request plus technical QC; creative excellence not guaranteed",
           "media":{}}
     for network in NETWORKS:
@@ -86,6 +86,7 @@ def create_manifest(asset_dir,output_root,tag,expected_day):
             "url":BASE+"/social/daily/"+expected_day+"/"+network+".mp4",
             "caption":caption,"video":video,"provider":"Metricool",
             "is_ai_generated":True,
+            "canva_video_rendered":bool(queued.get("canva_video_rendered",False)),
             "auto_publish_authorized":expected_day>="2026-11-07"}
     m=output_root/"social"/"latest.json"
     m.parent.mkdir(parents=True,exist_ok=True)
