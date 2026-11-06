@@ -41,6 +41,33 @@ class MediaStageTests(unittest.TestCase):
             self.assertTrue((site/"social/daily/2026-11-06/tiktok.mp4").exists())
             self.assertEqual(set(p.name for p in (site/"social/daily/2026-11-06").iterdir()),
                              {"tiktok.mp4","instagram.mp4"})
+    def test_daily_publish_only_for_real_canva_scene_video(self):
+        with tempfile.TemporaryDirectory() as root:
+            src=self.make_sources(root)
+            qpath=src/"publish-queue.json"
+            queue=json.loads(qpath.read_text())
+            queue["run_date_wib"]="2026-11-07"
+            qpath.write_text(json.dumps(queue))
+            draft=create_manifest(src,Path(root)/"procedural",
+                                  "marketing-2026-11-07","2026-11-07")
+            self.assertFalse(draft["media"]["tiktok"]["auto_publish_authorized"])
+            self.assertFalse(draft["media"]["instagram"]["auto_publish_authorized"])
+            for platform in ("tiktok","instagram"):
+                queue["assets"][platform]["canva_video_rendered"]=True
+                queue["assets"][platform]["canva_design_id"]="DAHaH123456"
+            qpath.write_text(json.dumps(queue))
+            approved=create_manifest(src,Path(root)/"canva",
+                                     "marketing-2026-11-07","2026-11-07")
+            self.assertTrue(approved["media"]["tiktok"]["auto_publish_authorized"])
+            self.assertTrue(approved["media"]["instagram"]["auto_publish_authorized"])
+            self.assertTrue(approved["canva_video_rendered"])
+            queue["assets"]["instagram"]["canva_design_id"]=None
+            qpath.write_text(json.dumps(queue))
+            mixed=create_manifest(src,Path(root)/"mixed",
+                                  "marketing-2026-11-07","2026-11-07")
+            self.assertFalse(mixed["media"]["instagram"]["auto_publish_authorized"])
+            self.assertTrue(mixed["media"]["tiktok"]["auto_publish_authorized"])
+
     def test_refuse_failed_qc_or_stale_source(self):
         with tempfile.TemporaryDirectory() as root:
             src=self.make_sources(root,False)
