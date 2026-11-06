@@ -12,6 +12,8 @@ on:
       - app.js
       - free-library.js
       - site_library_sync.py
+      - social_media_stage.py
+      - tests/test_social_media_stage.py
       - tests/test_site_library_sync.py
       - .github/workflows/daily-free-library.yml
 
