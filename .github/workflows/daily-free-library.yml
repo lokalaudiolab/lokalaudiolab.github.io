@@ -24,7 +24,7 @@ permissions:
 
 concurrency:
   group: lokal-audio-public-pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   sync-and-deploy:
