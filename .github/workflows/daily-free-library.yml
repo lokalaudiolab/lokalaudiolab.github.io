@@ -92,6 +92,11 @@ jobs:
           test -s site-dist/index.html
           test -s site-dist/free-library.js
           echo 'Static site and public free-audio directory prepared'
+      - name: Install open-source FFmpeg for platform-ready vertical encoding
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          ffmpeg -version | head -n 1
       - name: Prepare two explicitly approved public pilot videos for platform upload
         env:
           SFX_SOURCE_READ_TOKEN: ${{ secrets.SFX_SOURCE_READ_TOKEN }}
