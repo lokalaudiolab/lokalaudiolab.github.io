@@ -92,6 +92,40 @@ jobs:
           test -s site-dist/index.html
           test -s site-dist/free-library.js
           echo 'Static site and public free-audio directory prepared'
+      - name: Prepare two explicitly approved public pilot videos for platform upload
+        env:
+          SFX_SOURCE_READ_TOKEN: ${{ secrets.SFX_SOURCE_READ_TOKEN }}
+          SOCIAL_TEST_TAG: marketing-2026-11-06
+        run: |
+          set -euo pipefail
+          test -n "$SFX_SOURCE_READ_TOKEN" || {
+            echo "::error::Cannot retrieve pilot MP4 from private marketing release."
+            exit 1
+          }
+          export GH_TOKEN="$SFX_SOURCE_READ_TOKEN"
+          SOURCE_REPO='bulmue-dot/lokal-audio-lab'
+          PILOT_SOURCE='/tmp/lal-social-pilot'
+          OUTPUT_DIR="site-dist/social/pilot-2026-11-06"
+          mkdir -p "$PILOT_SOURCE" "$OUTPUT_DIR"
+          for CHANNEL in tiktok instagram; do
+            gh release download "$SOCIAL_TEST_TAG" --repo "$SOURCE_REPO" \
+              --pattern "$CHANNEL.mp4" --dir "$PILOT_SOURCE"
+            test -s "$PILOT_SOURCE/$CHANNEL.mp4"
+            ffmpeg -hide_banner -loglevel error -y -i "$PILOT_SOURCE/$CHANNEL.mp4" \
+              -vf 'scale=1080:1920:flags=lanczos,fps=30' \
+              -c:v libx264 -preset fast -crf 23 -pix_fmt yuv420p \
+              -c:a aac -b:a 160k -ar 48000 -movflags +faststart \
+              "$OUTPUT_DIR/$CHANNEL.mp4"
+            test -s "$OUTPUT_DIR/$CHANNEL.mp4"
+            resolution="$(ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p=0 "$OUTPUT_DIR/$CHANNEL.mp4")"
+            test "$resolution" = '1080,1920'
+            duration="$(ffprobe -v error -show_entries format=duration -of default=nw=1:nk=1 "$OUTPUT_DIR/$CHANNEL.mp4")"
+            echo "PILOT MEDIA $CHANNEL: 1080x1920, duration $duration s, bytes $(stat -c %s "$OUTPUT_DIR/$CHANNEL.mp4")"
+          done
+          echo '### Public media prepared for single TikTok and Instagram social test' >> "$GITHUB_STEP_SUMMARY"
+          echo 'https://lokalaudiolab.github.io/social/pilot-2026-11-06/tiktok.mp4' >> "$GITHUB_STEP_SUMMARY"
+          echo 'https://lokalaudiolab.github.io/social/pilot-2026-11-06/instagram.mp4' >> "$GITHUB_STEP_SUMMARY"
+          echo 'These are two explicitly requested pilot clips only; no private master material is distributed.' >> "$GITHUB_STEP_SUMMARY"
       - name: Upload public Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
