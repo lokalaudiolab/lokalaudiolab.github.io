@@ -1,7 +1,43 @@
 {
   "version": 1,
-  "updated_at": "2026-11-06T03:46:51+00:00",
+  "updated_at": "2026-11-07T06:10:35+00:00",
   "sounds": [
+    {
+      "id": "free-42330658320-1-short_glitch_cut_01",
+      "title": "Short Glitch Cut",
+      "context": "shortform",
+      "description": "Digital glitch snap for glitch cut editing",
+      "duration_seconds": 0.5,
+      "date_wib": "2026-11-07",
+      "url": "library/audio/2026-11-07/42330658320-1/short_glitch_cut_01.wav",
+      "sha256": "6dc9a720890e825ae3396ab861c2caf857d08fbdf49b9f7dd4d9f2ed07dc9404",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-42330658320-1"
+    },
+    {
+      "id": "free-42330658320-1-drama_radio_tune_01",
+      "title": "Drama Radio Tune",
+      "context": "audio_drama",
+      "description": "Stylized radio dial/noise cue for audio drama",
+      "duration_seconds": 1.4,
+      "date_wib": "2026-11-07",
+      "url": "library/audio/2026-11-07/42330658320-1/drama_radio_tune_01.wav",
+      "sha256": "19c523185584498662851e02f6607e97ebd82ebc72585fa877ec9b9f2c821f13",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-42330658320-1"
+    },
+    {
+      "id": "free-42330658320-1-comedy_fail_01",
+      "title": "Comedy Fail",
+      "context": "comedy",
+      "description": "Descending synth joke/fail response",
+      "duration_seconds": 1.15,
+      "date_wib": "2026-11-07",
+      "url": "library/audio/2026-11-07/42330658320-1/comedy_fail_01.wav",
+      "sha256": "ff9a982a73870f06ce3e56729653ac54f96c0d08c36983e13879c4727fe8dbaf",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-42330658320-1"
+    },
     {
       "id": "free-42152693523-1-short_tension_tick_01",
       "title": "Short Tension Tick",
