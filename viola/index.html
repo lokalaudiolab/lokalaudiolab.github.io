@@ -13,6 +13,19 @@
   <style>
 :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#f8f4ff;background:#151224;font-synthesis:none;--violet:#a483ef;--muted:#a8a1c2;--panel:#231d36}*{box-sizing:border-box}html{height:100%;background:#151224}body{margin:0;min-height:100%;background:radial-gradient(ellipse at 48% 20%,#282044 0%,#151224 49%,#110f20 100%)}button,input{font:inherit}button{cursor:pointer}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.app-shell{min-height:100dvh;max-width:610px;margin:0 auto;display:flex;flex-direction:column;border-left:1px solid #ffffff0d;border-right:1px solid #ffffff0d}.topbar{display:flex;align-items:center;justify-content:space-between;padding:21px 23px 13px}.brand{display:flex;gap:12px;align-items:center}.brand-mark{position:relative;display:grid;place-items:center;width:40px;height:40px;font-weight:900;font-size:25px;color:white;background:linear-gradient(135deg,#9a75e8,#6654ba);border-radius:14px;box-shadow:0 10px 20px #9365ef28}.brand-mark span{position:absolute;right:4px;top:1px;font-size:10px;color:#ffe5a8}.brand strong{display:block;letter-spacing:3.1px;font-size:15px;font-weight:850}.brand small{display:block;margin-top:3px;letter-spacing:.35px;font-size:10px;color:var(--muted)}.icon-button{border:1px solid #ffffff20;background:#ffffff0b;color:#e9d9ff;width:38px;height:38px;border-radius:13px;display:grid;place-items:center}.icon-button svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round}.safety-banner{margin:3px 21px 0;display:flex;align-items:center;gap:9px;padding:10px 12px;border:1px solid #eac99b2b;background:#eed3a20c;border-radius:12px;font-size:11px;line-height:1.5;color:#e9d6b4}.safety-banner b{font-size:10px;letter-spacing:.8px;margin-right:5px}.banner-dot{width:7px;height:7px;flex-shrink:0;background:#e7b86c;border-radius:50%;box-shadow:0 0 12px #e7b86c66}.content{min-height:0;flex:1;display:flex;flex-direction:column}.avatar-area{position:relative;flex:0 0 auto;min-height:300px;padding-top:8px;display:flex;align-items:center;flex-direction:column;justify-content:center;overflow:hidden}.glow{position:absolute;pointer-events:none;border-radius:50%;filter:blur(38px)}.glow-one{top:32px;background:#8865e355;width:225px;height:186px}.glow-two{width:110px;height:110px;background:#ffb7cb19;top:140px;left:15%}.avatar-frame{width:min(272px,70vw);height:240px;display:flex;align-items:center;justify-content:center;animation:floaty 5s ease-in-out infinite;z-index:1}.portrait{width:100%;height:100%;filter:drop-shadow(0 20px 30px #07051365)}.sparkles{position:absolute;inset:0;pointer-events:none;color:#c5b0ff}.sparkles i{font-size:19px;font-style:normal;position:absolute;left:19%;top:30%;animation:twinkle 2.5s infinite}.sparkles i:nth-child(2){left:76%;top:22%;font-size:26px;animation-delay:.6s}.sparkles i:nth-child(3){left:79%;top:59%;font-size:12px;animation-delay:1s}.avatar-label{z-index:1;margin:-6px 0 0;text-transform:uppercase;color:#f0eaff;font-size:10px;letter-spacing:2px;font-weight:800;text-align:center}.avatar-label span{color:#9e8dbb;padding:0 4px}.voice-bars{height:22px;margin:8px 0 0;display:flex;align-items:center;gap:3px;opacity:.45}.voice-bars i{width:3px;height:5px;background:#be9dff;border-radius:3px}.avatar-frame[data-state=talking]~.voice-bars i,.avatar-frame[data-state=listening]~.voice-bars i{animation:bar .7s ease-in-out infinite alternate}.voice-bars i:nth-child(2){animation-delay:.2s!important}.voice-bars i:nth-child(3){animation-delay:.1s!important}.voice-bars i:nth-child(4){animation-delay:.35s!important}.voice-bars i:nth-child(5){animation-delay:.15s!important}.avatar-frame .eye-closed,.avatar-frame .mouth-talk{opacity:0}.avatar-frame .eye-closed{animation:blink 6s infinite}.avatar-frame[data-state=talking] .mouth-talk{opacity:1;animation:talk .23s infinite alternate}.avatar-frame[data-state=talking] .mouth-rest{opacity:0}.avatar-frame[data-state=listening]{filter:drop-shadow(0 0 16px #a182e9aa)}.chat-panel{border-top:1px solid #ffffff14;background:linear-gradient(#1c182bde,#1a1728f5);border-radius:29px 29px 0 0;padding:20px 20px 10px;flex:1;display:flex;flex-direction:column;min-height:220px}.chat-topline{display:flex;align-items:center;justify-content:space-between;gap:10px}.chat-topline small{color:#a78cf0;letter-spacing:1.8px;font-size:9px;font-weight:800}.chat-topline h1{font-size:17px;margin:4px 0 9px;letter-spacing:-.4px}.text-button{border:none;background:none;color:#b9a2e5;font-size:11px;text-decoration:underline;text-underline-offset:3px;padding:8px 0}.messages{overflow-y:auto;flex:1;min-height:110px;max-height:31vh;display:flex;flex-direction:column;gap:13px;padding:8px 0 14px;scrollbar-width:thin;scrollbar-color:#615378 transparent}.message{max-width:86%;align-self:flex-start}.message.user{align-self:flex-end}.msg-meta{display:flex;gap:8px;align-items:center;font-size:9px;color:#8f86aa;margin-bottom:5px;padding-left:8px}.message.user .msg-meta{justify-content:flex-end;padding-left:0;padding-right:5px}.message .bubble{font-size:13px;line-height:1.55;white-space:pre-wrap;word-break:break-word;padding:11px 13px;border-radius:15px 15px 15px 4px;border:1px solid #ffffff10;color:#f2eafa;background:#302944}.message.user .bubble{border-radius:15px 15px 4px 15px;background:linear-gradient(135deg,#7e61bf,#6049a2);border-color:#c6b0ff22;color:#fff}.quick-replies{display:flex;gap:8px;overflow-x:auto;padding:8px 0 4px;scrollbar-width:none}.quick-replies button{border:1px solid #8f74cb51;background:#6d589c1b;color:#d9c9ff;border-radius:100px;padding:8px 11px;font-size:11px;white-space:nowrap}.composer-wrap{background:#1a1728;padding:8px 20px max(12px,env(safe-area-inset-bottom));border-top:1px solid #ffffff0b}.composer{border:1px solid #b19ce62b;border-radius:19px;background:#302943;display:flex;align-items:center;gap:10px;padding:7px}.composer input{flex:1;min-width:0;background:transparent;border:none;outline:none;color:#fff;font-size:13px}.composer input::placeholder{color:#a79bbd}.mic-button{height:36px;width:36px;display:grid;place-items:center;border:none;border-radius:12px;background:#ffffff13;color:#c4aff5}.mic-button.active{background:#a44eb9;color:#fff;box-shadow:0 0 0 5px #a44eb933;animation:pulse 1.2s infinite}.mic-button:disabled{opacity:.38;cursor:not-allowed}.mic-button svg{height:18px;width:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}.send-button{height:36px;width:36px;display:grid;place-items:center;border:none;border-radius:12px;color:#fff;background:#916fe0;box-shadow:0 4px 15px #8c5bd74d}.send-button svg{height:18px;width:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round}.composer-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 4px 0}.composer-foot span{font-size:10px;color:#8f85a6}.composer-foot button{border:none;background:none;color:#ccbaea;font-size:11px}.toast{position:fixed;z-index:10;bottom:100px;left:50%;transform:translate(-50%,20px);max-width:calc(100% - 32px);opacity:0;pointer-events:none;border-radius:13px;background:#49365e;color:#fff;padding:11px 16px;font-size:12px;box-shadow:0 15px 30px #0006;transition:opacity .25s,transform .25s}.toast.show{opacity:1;transform:translate(-50%,0)}.settings-dialog{width:calc(100% - 32px);max-width:440px;color:#eee4ff;border:1px solid #ffffff20;background:#231d36;border-radius:22px;box-shadow:0 24px 70px #0009;padding:21px}.settings-dialog::backdrop{background:#090710b8;backdrop-filter:blur(5px)}.settings-dialog .dialog-header{display:flex;justify-content:space-between;align-items:center}.settings-dialog h2{font-size:19px;margin:0}.settings-dialog p{font-size:13px;line-height:1.6;color:#c9bddc}.setting-info{display:flex;flex-direction:column;gap:4px;padding:12px 0;border-bottom:1px solid #ffffff13}.setting-info b{font-size:13px}.setting-info span{font-size:12px;color:#b9aacc;line-height:1.5}.install-button{background:#9373dd;border:none;border-radius:12px;padding:13px;color:white;width:100%;font-weight:800;margin-top:19px}.settings-dialog small{font-size:11px;color:#ada0bf;line-height:1.6;display:block;margin-top:10px}.settings-dialog .privacy-note{color:#c4a87a;margin-top:16px}@keyframes twinkle{0%,100%{opacity:.25;transform:scale(.7)}50%{opacity:1;transform:scale(1.3)}}@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}@keyframes blink{0%,46%,48%,100%{opacity:0}47%{opacity:1}}@keyframes talk{0%{transform:scaleY(.55)}100%{transform:scaleY(1.1)}}@keyframes bar{0%{height:5px}100%{height:18px}}@keyframes pulse{50%{box-shadow:0 0 0 9px #a44eb911}}@media(min-height:950px){.avatar-area{min-height:360px}.avatar-frame{height:278px;width:312px}.messages{max-height:40vh}}@media(max-height:730px){.avatar-area{min-height:230px}.avatar-frame{height:185px;width:220px}.chat-panel{padding-top:13px}.messages{max-height:28vh;min-height:75px}.topbar{padding-top:11px}.safety-banner{padding:6px 10px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 
+
+/* Viola AI owner auth and backup controls */
+.auth-panel{background:#151224;border:1px solid #a483ef55;border-radius:14px;padding:13px;margin:12px 0}
+.auth-panel label{display:block;font-size:12px;margin:8px 0 4px;color:#dbd0f6}
+.auth-panel input{background:#2c2446;border:1px solid #594c77;border-radius:9px;padding:11px;color:white;width:100%;font-size:14px}
+.auth-panel button,.backup-controls button{border:1px solid #856ac9;border-radius:10px;background:#5c439d;padding:11px 14px;color:#fff;font-size:13px;margin:6px 6px 0 0}
+.auth-panel button:disabled,.backup-controls button:disabled{opacity:.5}
+.auth-panel .secondary,.backup-controls button{background:#322749}
+.auth-panel small,.backup-controls small{display:block;color:#c9bddb;line-height:1.5;margin:6px 0}
+#authStatus{margin-top:8px;color:#e7dff5;line-height:1.5;font-size:12px;overflow-wrap:anywhere}
+#signedEmail{font-size:12px;color:#eadfff;overflow-wrap:anywhere}
+.backup-controls{padding:10px 0}
+.backup-controls input[type=file]{display:none}
 </style>
 </head>
 <body>
@@ -21,7 +34,7 @@
       <div class="brand"><div class="brand-mark" aria-hidden="true">V<span>✦</span></div><div><strong>VIOLA</strong><small>virtual companion · prototype</small></div></div>
       <div class="top-actions"><button class="icon-button" id="settingsBtn" aria-label="Buka pengaturan" title="Pengaturan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2l1.7.4.5 1.6 1.5.7 1.5-.8 1.6 1.6-.8 1.5.7 1.5 1.6.5.4 1.8-.4 1.7-1.6.5-.7 1.5.8 1.5-1.6 1.6-1.5-.8-1.5.7-.5 1.6-1.7.4-1.8-.4-.5-1.6-1.5-.7-1.5.8-1.6-1.6.8-1.5-.7-1.5-1.6-.5-.4-1.7.4-1.8 1.6-.5.7-1.5-.8-1.5 1.6-1.6 1.5.8 1.5-.7.5-1.6z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
     </header>
-    <div class="safety-banner" role="status"><span class="banner-dot"></span><div><b>MODE DEMO</b><span> Respons terbatas. AI sungguhan belum terhubung.</span></div></div>
+    <div class="safety-banner" role="status"><span class="banner-dot"></span><div><b id="modeTag">MODE DEMO</b><span id="modeDetails"> Respons terbatas. AI sungguhan belum terhubung.</span></div></div>
     <main class="content">
       <section class="avatar-area" aria-label="Avatar animasi Viola">
         <div class="glow glow-one"></div><div class="glow glow-two"></div>
@@ -64,13 +77,79 @@
       <div class="composer-foot"><span id="speechSupport">Mengecek dukungan suara...</span><button type="button" id="ttsBtn" aria-pressed="false">🔇 Suara mati</button></div>
     </footer>
   </div>
-  <dialog id="settingsDialog" class="settings-dialog"><form method="dialog"><div class="dialog-header"><h2>Pengaturan Viola</h2><button type="submit" class="icon-button close-button" aria-label="Tutup">✕</button></div><p>Versi ini sengaja dimulai sebagai demo lokal. Chat disimpan di browser HP, bukan dikirim ke server.</p><div class="setting-info"><b>AI sungguhan</b><span>Belum terhubung. Butuh backend aman dan kredensial API di server.</span></div><div class="setting-info"><b>Pengenalan suara</b><span id="micSettingStatus">Memeriksa...</span></div><div class="setting-info"><b>Suara jawaban</b><span>Menggunakan text-to-speech dari browser/HP jika tersedia.</span></div><button id="installBtn" type="button" class="install-button">Pasang di Android</button><small id="installHelp">Untuk memasang PWA: buka alamat HTTPS di Chrome Android → menu ⋮ → Tambahkan ke layar utama / Install app.</small><small class="privacy-note">Catatan privasi: bila memakai mikrofon, pemrosesan pengenalan suara mungkin dilakukan oleh penyedia browser. Jangan gunakan informasi rahasia dalam demo.</small></form></dialog>
+  <dialog id="settingsDialog" class="settings-dialog"><form method="dialog"><div class="dialog-header"><h2>Pengaturan Viola</h2><button type="submit" class="icon-button close-button" aria-label="Tutup">✕</button></div><p>Chat demo tersimpan di browser HP. Saat AI aktif, pesan dikirim ke backend privat untuk diproses. Jangan kirim rahasia pribadi sebelum memahami pengaturan privasinya.</p>
+<div class="setting-info"><b>Koneksi AI</b><span id="aiSettingStatus">Mengecek backend...</span></div>
+<div class="auth-panel">
+  <b>Masuk sebagai pemilik Viola</b>
+  <small>Login memakai Supabase Auth. Cuma akun yang diizinkan pemilik yang boleh memakai kuota AI.</small>
+  <div id="authLoginFields">
+    <label for="violaEmail">Email</label><input type="email" id="violaEmail" autocomplete="username" maxlength="254" placeholder="email pemilik" />
+    <label for="violaPassword">Password</label><input type="password" id="violaPassword" autocomplete="current-password" minlength="8" maxlength="128" placeholder="Minimal 8 karakter" />
+    <button type="button" id="authSignIn">Masuk</button><button type="button" class="secondary" id="authSignUp">Buat akun</button>
+  </div>
+  <div id="authLoggedIn" hidden><p id="signedEmail"></p><button type="button" id="authSignOut">Keluar</button></div>
+  <div id="authStatus" role="status">Belum masuk.</div>
+</div>
+<div class="setting-info"><b>Cadangan karakter Viola</b><span>Ekspor atau pulihkan pengaturan dan riwayat lokal ke Android lain. Ini bukan kloning model AI atau suara manusia.</span></div>
+<div class="backup-controls">
+  <button type="button" id="cloneExport">Ekspor cadangan Viola</button><button type="button" id="cloneImport" class="secondary">Impor cadangan Viola</button>
+  <input type="file" id="cloneFile" accept=".json,application/json" />
+  <small>File ekspor memuat riwayat chat. Simpan secara pribadi. Password dan token tidak pernah ikut diekspor.</small>
+</div><div class="setting-info"><b>Pengenalan suara</b><span id="micSettingStatus">Memeriksa...</span></div><div class="setting-info"><b>Suara jawaban</b><span>Menggunakan text-to-speech dari browser/HP jika tersedia.</span></div><button id="installBtn" type="button" class="install-button">Pasang di Android</button><small id="installHelp">Untuk memasang PWA: buka alamat HTTPS di Chrome Android → menu ⋮ → Tambahkan ke layar utama / Install app.</small><small class="privacy-note">Catatan privasi: bila memakai mikrofon, pemrosesan pengenalan suara mungkin dilakukan oleh penyedia browser. Jangan gunakan informasi rahasia dalam demo.</small></form></dialog>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script>
 (() => {
   'use strict';
   const $ = id => document.getElementById(id);
-  const keys = {history:'viola_demo_chat_v1',tts:'viola_demo_tts_v1'};
+  const keys = {history:'viola_demo_chat_v1',tts:'viola_demo_tts_v1',auth:'viola_auth_session_v1'};
+  const SUPA_URL='https://ixfdvcrhylssumixonzm.supabase.co', PUBLISHABLE_KEY="sb_publishable_CnDwkBIiXFm_Mixwtvs0EQ_DFwo8AsD", AI_URL=SUPA_URL+'/functions/v1/viola-chat';
+  let session=null, aiConfigured=false, onlineCheck=false, busy=false;
+  const getAuthHeader=()=>({apikey:PUBLISHABLE_KEY,'Content-Type':'application/json'});
+  function modeLabel(mode){return mode==='ai'?'VIOLA · AI':mode==='system'?'SISTEM':'VIOLA · DEMO';}
+  function updateMode(){
+    const active=Boolean(aiConfigured&&session?.access_token);
+    const banner=$('modeTag'),details=$('modeDetails');
+    banner.textContent=active?'MODE AI':aiConfigured?'AI BELUM LOGIN':'MODE DEMO';
+    details.textContent=active?' AI tersedia, siap mengobrol dengan akun pemilik.':aiConfigured?' Login pemilik untuk mengaktifkan chat AI.':onlineCheck?' Backend tersedia, tapi kredensial AI belum lengkap.':' Respons terbatas. AI sungguhan belum tersambung.';
+    $('aiSettingStatus').textContent=active?'AI tersedia (belum menguji keberhasilan balasan).':aiConfigured?'Backend sudah dikonfigurasi. Login untuk mulai.':onlineCheck?'Backend siap, menunggu konfigurasi kunci API server.':'Belum dapat memastikan kesiapan backend. Demo tetap berfungsi.';
+    $('authLoginFields').hidden=Boolean(session);
+    $('authLoggedIn').hidden=!session;
+    $('signedEmail').textContent=session?.user?.email||'Akun terautentikasi';
+    if(session) $('authStatus').textContent='Login berhasil. '+(aiConfigured?'Koneksi AI bisa dicoba.':'AI menunggu konfigurasi server.');
+  }
+  function loadSession(){try{const x=JSON.parse(localStorage.getItem(keys.auth)||'null');if(x&&typeof x.access_token==='string'&&typeof x.refresh_token==='string'){session=x;}}catch{}}
+  function saveSession(value){session=value;try{if(value)localStorage.setItem(keys.auth,JSON.stringify(value));else localStorage.removeItem(keys.auth);}catch{}updateMode();}
+  async function refreshSession(){
+    if(!session)return null;
+    if(Number(session.expires_at||0)*1000>Date.now()+60000)return session;
+    try{
+      const r=await fetch(SUPA_URL+'/auth/v1/token?grant_type=refresh_token',{method:'POST',headers:getAuthHeader(),body:JSON.stringify({refresh_token:session.refresh_token}),signal:AbortSignal.timeout(12000)});
+      const d=await r.json();
+      if(!r.ok||!d.access_token)throw Error('Sesi berakhir.');
+      saveSession({...d,expires_at:Math.floor(Date.now()/1000)+(d.expires_in||3600)});
+      return session;
+    }catch(e){saveSession(null);toast('Sesi login berakhir. Masuk lagi untuk memakai AI.');return null;}
+  }
+  async function authAction(type){
+    const email=$('violaEmail').value.trim().toLowerCase(),password=$('violaPassword').value;
+    if(!email.includes('@')||password.length<8){$('authStatus').textContent='Masukkan email valid dan password minimal 8 karakter.';return;}
+    const endpoint=type==='signup'?'/auth/v1/signup':'/auth/v1/token?grant_type=password';
+    $('authStatus').textContent='Menghubungi layanan login...';
+    $('authSignIn').disabled=$('authSignUp').disabled=true;
+    try{
+      const r=await fetch(SUPA_URL+endpoint,{method:'POST',headers:getAuthHeader(),body:JSON.stringify({email,password}),signal:AbortSignal.timeout(15000)});
+      const d=await r.json();
+      if(!r.ok)throw Error(d.msg||d.error_description||d.message||'Login gagal.');
+      if(d.access_token){saveSession({...d,expires_at:Math.floor(Date.now()/1000)+(d.expires_in||3600)});$('violaPassword').value='';}
+      else $('authStatus').textContent='Akun dibuat. Periksa email untuk konfirmasi bila diminta, lalu kembali dan login.';
+    }catch(e){$('authStatus').textContent=String(e.message||'Koneksi login gagal.');}
+    finally{$('authSignIn').disabled=$('authSignUp').disabled=false;}
+  }
+  async function checkBackend(){
+    try{const r=await fetch(AI_URL,{method:'GET',headers:{apikey:PUBLISHABLE_KEY},cache:'no-store',signal:AbortSignal.timeout(10000)});const d=await r.json();onlineCheck=Boolean(r.ok&&d.ok);aiConfigured=Boolean(onlineCheck&&d.configured);}
+    catch{onlineCheck=false;aiConfigured=false;}
+    updateMode();
+  }
   const log = $('messages'), input = $('chatInput'), avatar = $('avatar'), avatarStatus = $('avatarStatus');
   const micBtn = $('micBtn'), micSupport = $('speechSupport'), ttsBtn = $('ttsBtn'), dlg = $('settingsDialog');
   let listening = false, recognition = null, toastTimer = null, responseTimer = null, voiceTimer = null;
@@ -79,17 +158,17 @@
   const initialMessage = {who:'viola',text:'Hai! Gue Viola versi demo. 👋 Lu bisa coba chat, mikrofon (kalau didukung Chrome), dan suara jawaban. Tapi gue belum tersambung ke AI sungguhan, ya.'};
   const Clock = new Intl.DateTimeFormat('id-ID',{hour:'2-digit',minute:'2-digit'});
   const setAvatar = (state, label) => {avatar.dataset.state=state;avatarStatus.innerHTML = '<span style="color:#f0eaff">VIOLA</span> <span>·</span> '+label;};
-  function safeLoad(){try{const parsed=JSON.parse(localStorage.getItem(keys.history)||'[]');if(Array.isArray(parsed))return parsed.filter(x=>x&&['user','viola'].includes(x.who)&&typeof x.text==='string').slice(-50).map(x=>({who:x.who,text:x.text.slice(0,1200),time:Number.isFinite(x.time)?x.time:Date.now()}));}catch(e){}return [];}
+  function safeLoad(){try{const parsed=JSON.parse(localStorage.getItem(keys.history)||'[]');if(Array.isArray(parsed))return parsed.filter(x=>x&&['user','viola','system'].includes(x.who)&&typeof x.text==='string').slice(-50).map(x=>({who:x.who,text:x.text.slice(0,1200),mode:x.mode==='ai'?'ai':x.mode==='system'?'system':'demo',time:Number.isFinite(x.time)?x.time:Date.now()}));}catch(e){}return [];}
   function save(){try{localStorage.setItem(keys.history,JSON.stringify(messages.slice(-50)));}catch(e){toast('Penyimpanan browser tidak tersedia.');}}
-  function addMessage(who,text,persist=true){
-    const item={who,text,time:Date.now()};messages.push(item);
+  function addMessage(who,text,persist=true,mode='demo'){
+    const item={who,text,time:Date.now(),mode};messages.push(item);
     const outer=document.createElement('div');outer.className='message '+(who==='user'?'user':'viola');
-    const meta=document.createElement('div');meta.className='msg-meta';meta.textContent=(who==='user'?'LU':'VIOLA · DEMO')+' · '+Clock.format(item.time);
+    const meta=document.createElement('div');meta.className='msg-meta';meta.textContent=(who==='user'?'LU':modeLabel(mode))+' · '+Clock.format(item.time);
     const bubble=document.createElement('div');bubble.className='bubble';bubble.textContent=text;
     outer.append(meta,bubble);log.appendChild(outer);log.scrollTop=log.scrollHeight;
     if(persist)save();return item;
   }
-  function render(){log.innerHTML='';const old=messages.slice();messages=[];for(const m of old){const item=addMessage(m.who,m.text,false);item.time=m.time;const meta=log.lastElementChild.querySelector('.msg-meta');meta.textContent=(m.who==='user'?'LU':'VIOLA · DEMO')+' · '+Clock.format(m.time);}if(!old.length)addMessage(initialMessage.who,initialMessage.text);}
+  function render(){log.innerHTML='';const old=messages.slice();messages=[];for(const m of old){const item=addMessage(m.who,m.text,false,m.mode||'demo');item.time=m.time;const meta=log.lastElementChild.querySelector('.msg-meta');meta.textContent=(m.who==='user'?'LU':modeLabel(m.mode))+' · '+Clock.format(m.time);}if(!old.length)addMessage(initialMessage.who,initialMessage.text);}
   function cannedReply(text){const s=text.toLocaleLowerCase('id-ID');
     if(/(hai|halo|hello|pagi|siang|sore|malam|viola\b)/.test(s)&&s.length<40)return 'Hai juga! ✨ Gue ada di sini, meski baru versi demo. Coba minta jokes atau ide buat Lokal Studios, deh.';
     if(/(joke|jokes|lucu|ngakak|lawak|bercanda)/.test(s))return 'Kenapa editor audio jarang tenang? Karena hidupnya penuh noise. 🥁 Tenang, ini jokes demo. Yang asli masih perlu sambungan AI.';
@@ -103,9 +182,34 @@
   function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),3800)}
   function speak(text){if(!ttsEnabled||!('speechSynthesis'in window))return;try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text.replace(/[✨🥁😌👋]/gu,''));u.lang='id-ID';u.rate=1;u.pitch=1.08;const voices=speechSynthesis.getVoices();const v=voices.find(v=>v.lang.toLowerCase().startsWith('id'));if(v)u.voice=v;u.onstart=()=>setAvatar('talking','lagi ngomong');u.onend=u.onerror=()=>setAvatar('idle','siap diajak ngobrol');speechSynthesis.speak(u);clearTimeout(voiceTimer);voiceTimer=setTimeout(()=>{if(!speechSynthesis.speaking)setAvatar('idle','siap diajak ngobrol')},4000);}catch(e){toast('Browser gagal memutar suara. Coba mode teks.');setAvatar('idle','siap diajak ngobrol')}}
   function stopVoice(){if('speechSynthesis'in window)speechSynthesis.cancel();clearTimeout(voiceTimer);}
-  function submitMessage(value){const text=value.trim();if(!text)return;input.value='';if(text.length>500){toast('Maksimal 500 karakter.');return;}stopVoice();clearTimeout(responseTimer);setAvatar('idle','sedang membalas demo');addMessage('user',text);responseTimer=setTimeout(()=>{const reply=cannedReply(text);addMessage('viola',reply);setAvatar('idle','siap diajak ngobrol');speak(reply);},350);}
+  async function submitMessage(value){
+    const text=String(value||'').trim();
+    if(!text||busy)return;
+    if(text.length>500){toast('Maksimal 500 karakter.');return;}
+    input.value='';stopVoice();clearTimeout(responseTimer);
+    addMessage('user',text);
+    if(!aiConfigured){
+      setAvatar('idle','sedang membalas demo');
+      responseTimer=setTimeout(()=>{const reply=cannedReply(text);addMessage('viola',reply,true,'demo');setAvatar('idle','siap diajak ngobrol');speak(reply);},300);
+      return;
+    }
+    busy=true;$('sendBtn').disabled=true;setAvatar('thinking','Viola sedang berpikir');
+    try{
+      const auth=await refreshSession();
+      if(!auth){addMessage('system','AI sudah disiapkan, tapi lu belum login. Buka pengaturan untuk masuk.',true,'system');return;}
+      const recent=messages.filter(x=>x.who==='user'||x.who==='viola'&&x.mode==='ai').slice(-12).map(x=>({role:x.who==='user'?'user':'assistant',content:x.text.slice(0,1000)}));
+      const r=await fetch(AI_URL,{method:'POST',headers:{...getAuthHeader(),Authorization:'Bearer '+auth.access_token},body:JSON.stringify({messages:recent}),signal:AbortSignal.timeout(30000)});
+      let d;try{d=await r.json();}catch{d={error:'Respons server bukan JSON.'};}
+      if(!r.ok||!d.ok||typeof d.reply!=='string')throw Error(d.error||'Koneksi AI gagal.');
+      addMessage('viola',d.reply,true,'ai');speak(d.reply);
+    }catch(e){addMessage('system','AI belum bisa membalas: '+String(e.message||'Terjadi kesalahan.'),true,'system');}
+    finally{busy=false;$('sendBtn').disabled=false;setAvatar('idle','siap diajak ngobrol');}
+  }
   $('chatForm').addEventListener('submit',e=>{e.preventDefault();submitMessage(input.value)});
   document.querySelectorAll('[data-prompt]').forEach(el=>el.addEventListener('click',()=>submitMessage(el.dataset.prompt)));
+  $('authSignIn').addEventListener('click',()=>authAction('login'));
+  $('authSignUp').addEventListener('click',()=>authAction('signup'));
+  $('authSignOut').addEventListener('click',()=>{saveSession(null);$('authStatus').textContent='Sudah keluar dari akun.';});
   $('clearBtn').addEventListener('click',()=>{if(!window.confirm('Hapus seluruh riwayat chat demo di browser ini?'))return;stopVoice();clearTimeout(responseTimer);messages=[];localStorage.removeItem(keys.history);render();toast('Riwayat demo sudah dihapus.');});
   function updateTts(){ttsBtn.textContent=ttsEnabled?'🔊 Suara nyala':'🔇 Suara mati';ttsBtn.setAttribute('aria-pressed',String(ttsEnabled));}
   ttsBtn.addEventListener('click',()=>{if(!('speechSynthesis'in window)){toast('Text-to-speech tidak tersedia di browser ini.');return;}ttsEnabled=!ttsEnabled;localStorage.setItem(keys.tts,String(ttsEnabled));if(!ttsEnabled){stopVoice();setAvatar('idle','siap diajak ngobrol')}updateTts();toast(ttsEnabled?'Suara jawaban aktif.':'Suara jawaban dimatikan.');});
@@ -130,7 +234,24 @@
   window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();pendingInstall=e;});
   $('installBtn').addEventListener('click',async()=>{if(pendingInstall){pendingInstall.prompt();await pendingInstall.userChoice;pendingInstall=null;return;}toast('Buka lewat HTTPS di Chrome Android, lalu pilih ⋮ → Tambahkan ke layar utama.');});
   window.addEventListener('appinstalled',()=>toast('Viola sudah terpasang di perangkat.'));
-  messages=safeLoad();render();updateTts();
+  $('cloneExport').addEventListener('click',()=>{
+    const copy={format:'viola-persona-backup',version:1,created_at:new Date().toISOString(),settings:{voice_enabled:ttsEnabled,personality:'Viola: santai, tegas, ceria, Indonesia'},chat:messages.filter(m=>['user','viola'].includes(m.who)).slice(-50).map(({who,text,time,mode})=>({who,text,time,mode}))};
+    const url=URL.createObjectURL(new Blob([JSON.stringify(copy,null,2)],{type:'application/json'}));
+    const a=document.createElement('a');a.href=url;a.download='viola-persona-backup.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),5000);toast('Cadangan persona dan chat diekspor. Simpan file dengan aman.');
+  });
+  $('cloneImport').addEventListener('click',()=>$('cloneFile').click());
+  $('cloneFile').addEventListener('change',async e=>{
+    const file=e.target.files?.[0];e.target.value='';if(!file)return;
+    if(file.size>250000){toast('Cadangan terlalu besar (maksimal 250 KB).');return;}
+    try{
+      const d=JSON.parse(await file.text());
+      if(d.format!=='viola-persona-backup'||d.version!==1||!Array.isArray(d.chat))throw Error('Format cadangan tidak dikenali.');
+      const safe=d.chat.filter(x=>x&&['user','viola'].includes(x.who)&&typeof x.text==='string'&&x.text.length<=1200&&Number.isFinite(x.time)).slice(-50).map(x=>({who:x.who,text:x.text,time:x.time,mode:x.mode==='ai'?'ai':'demo'}));
+      if(!window.confirm('Pulihkan '+safe.length+' pesan dari cadangan? Riwayat chat lokal saat ini akan diganti.'))return;
+      messages=safe;render();save();ttsEnabled=Boolean(d.settings?.voice_enabled);localStorage.setItem(keys.tts,String(ttsEnabled));updateTts();toast('Cadangan persona Viola berhasil dipulihkan.');
+    }catch(err){toast('Impor gagal: '+String(err.message||'file tidak valid'));}
+  });
+  loadSession();messages=safeLoad();render();updateTts();updateMode();checkBackend();
   if('serviceWorker'in navigator&&location.protocol!=='file:')window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
 })();
 
