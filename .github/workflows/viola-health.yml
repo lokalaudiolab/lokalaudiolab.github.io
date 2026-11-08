@@ -1,0 +1,62 @@
+name: VIOLA Android PWA smoke check
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'viola/**'
+      - '.github/workflows/viola-health.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify published Android app and AI backend
+        shell: bash
+        env:
+          VIOLA_URL: https://lokalaudiolab.github.io/viola/
+          VIOLA_BACKEND: https://ixfdvcrhylssumixonzm.supabase.co/functions/v1/viola-chat
+        run: |
+          set -euo pipefail
+          echo "Checking deployed HTML, PWA assets and backend. No API secrets needed."
+          curl --retry 5 --retry-delay 4 --retry-all-errors -fLsS --max-time 20 "$VIOLA_URL" -o /tmp/viola-index.html
+          grep -Fq 'id="modeTag"' /tmp/viola-index.html
+          grep -Fq 'id="authSignIn"' /tmp/viola-index.html
+          grep -Fq 'id="cloneExport"' /tmp/viola-index.html
+          echo "OK: mobile chat, owner login and persona backup UI present."
+          curl --retry 4 --retry-delay 3 --retry-all-errors -fLsS --max-time 20 "${VIOLA_URL}manifest.webmanifest" -o /tmp/viola-manifest.json
+          curl --retry 4 --retry-delay 3 --retry-all-errors -fLsS --max-time 20 "${VIOLA_URL}sw.js" -o /tmp/viola-service-worker.js
+          curl --retry 4 --retry-delay 3 --retry-all-errors -fLsS --max-time 20 "${VIOLA_URL}icon-192.png" -o /tmp/viola-icon.png
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=json.loads(Path('/tmp/viola-manifest.json').read_text())
+          assert p['short_name']=='VIOLA',p.get('short_name')
+          assert p['display']=='standalone'
+          i=Path('/tmp/viola-icon.png').read_bytes()
+          assert i.startswith(b'\x89PNG\r\n\x1a\n')
+          print('OK: install manifest, worker and PNG icon present.')
+          PY
+          code=$(curl --retry 3 --retry-delay 2 --retry-all-errors -sS --max-time 20 -o /tmp/viola-backend.json -w '%{http_code}' "$VIOLA_BACKEND")
+          test "$code" = "200"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('/tmp/viola-backend.json').read_text())
+          assert data.get('ok') is True,data
+          assert data.get('requires_login') is True,data
+          configured=bool(data.get('configured'))
+          print('OK: backend reachable, owner login required.')
+          print('OpenAI credentials configured:',str(configured).lower())
+          with open('/tmp/viola-configured','w') as file: file.write(str(configured).lower())
+          PY
+          echo "### Viola AI Android deployment" >> "$GITHUB_STEP_SUMMARY"
+          echo "- PWA website and install assets: **PASS**" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Backend health: **PASS**" >> "$GITHUB_STEP_SUMMARY"
+          echo "- AI credentials configured: **$(cat /tmp/viola-configured)**" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Real AI conversation: **NOT TESTED** (owner sign-in and funded API required)" >> "$GITHUB_STEP_SUMMARY"
