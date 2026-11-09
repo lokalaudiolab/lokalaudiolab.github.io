@@ -1,7 +1,43 @@
 {
   "version": 1,
-  "updated_at": "2026-11-08T06:12:41+00:00",
+  "updated_at": "2026-11-09T06:30:18+00:00",
   "sounds": [
+    {
+      "id": "free-42553063394-1-short_glitch_cut_01",
+      "title": "Short Glitch Cut",
+      "context": "shortform",
+      "description": "Digital glitch snap for glitch cut editing",
+      "duration_seconds": 0.5,
+      "date_wib": "2026-11-09",
+      "url": "library/audio/2026-11-09/42553063394-1/short_glitch_cut_01.wav",
+      "sha256": "c76514673ef9746c8d39f617fb0ec775778c7398d56a7d2ea8d9fd71277c0b71",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-42553063394-1"
+    },
+    {
+      "id": "free-42553063394-1-drama_radio_tune_01",
+      "title": "Drama Radio Tune",
+      "context": "audio_drama",
+      "description": "Stylized radio dial/noise cue for audio drama",
+      "duration_seconds": 1.4,
+      "date_wib": "2026-11-09",
+      "url": "library/audio/2026-11-09/42553063394-1/drama_radio_tune_01.wav",
+      "sha256": "8a0cc5487da5099df51ca822930274063815c63b044683f18529b0aa3b8dd2e7",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-42553063394-1"
+    },
+    {
+      "id": "free-42553063394-1-ad_product_reveal_01",
+      "title": "Ad Product Reveal",
+      "context": "commercial",
+      "description": "Polished product reveal sweep for ads",
+      "duration_seconds": 1.9,
+      "date_wib": "2026-11-09",
+      "url": "library/audio/2026-11-09/42553063394-1/ad_product_reveal_01.wav",
+      "sha256": "6de1d5c6b0f0abbd8e01e51476f8daa843d7041e7c765e3a7871968157a0984f",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-42553063394-1"
+    },
     {
       "id": "free-42439875026-1-short_tension_tick_01",
       "title": "Short Tension Tick",
