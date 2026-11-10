@@ -1,7 +1,43 @@
 {
   "version": 1,
-  "updated_at": "2026-11-09T06:30:18+00:00",
+  "updated_at": "2026-11-10T06:19:05+00:00",
   "sounds": [
+    {
+      "id": "free-42744824418-1-cinematic_hit_01",
+      "title": "Cinematic Hit",
+      "context": "cinematic",
+      "description": "Low-end cinematic strike for cuts and trailer accents",
+      "duration_seconds": 1.2,
+      "date_wib": "2026-11-10",
+      "url": "library/audio/2026-11-10/42744824418-1/cinematic_hit_01.wav",
+      "sha256": "3a27261e2bc3f7a26b2ae86a8639a85639a0f2eb89d597bb7bd32f2eaaf3351d",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-42744824418-1"
+    },
+    {
+      "id": "free-42744824418-1-short_tension_tick_01",
+      "title": "Short Tension Tick",
+      "context": "shortform",
+      "description": "Dry tick to pace short-form tension or countdown",
+      "duration_seconds": 0.5,
+      "date_wib": "2026-11-10",
+      "url": "library/audio/2026-11-10/42744824418-1/short_tension_tick_01.wav",
+      "sha256": "995e0aefa5aa553428805ab04d287fd69690d69b514a135dd023210cca12f7d7",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-42744824418-1"
+    },
+    {
+      "id": "free-42744824418-1-drama_mystery_drone_01",
+      "title": "Drama Mystery Drone",
+      "context": "audio_drama",
+      "description": "Low atmospheric suspense texture, synthetic not location Foley",
+      "duration_seconds": 2.5,
+      "date_wib": "2026-11-10",
+      "url": "library/audio/2026-11-10/42744824418-1/drama_mystery_drone_01.wav",
+      "sha256": "7b8a31847cb64852e4b98373ffc59ef7ea6d98c7b384e408b3d6d5f93931404e",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-42744824418-1"
+    },
     {
       "id": "free-42553063394-1-short_glitch_cut_01",
       "title": "Short Glitch Cut",
