@@ -1,7 +1,43 @@
 {
   "version": 1,
-  "updated_at": "2026-11-10T06:19:05+00:00",
+  "updated_at": "2026-11-11T06:23:07+00:00",
   "sounds": [
+    {
+      "id": "free-42948113334-1-ad_shimmer_01",
+      "title": "Ad Shimmer",
+      "context": "commercial",
+      "description": "Sparkly brand logo sparkle accent",
+      "duration_seconds": 1.4,
+      "date_wib": "2026-11-11",
+      "url": "library/audio/2026-11-11/42948113334-1/ad_shimmer_01.wav",
+      "sha256": "1494377d51d9c578c60f6f2dad9327dac9a8fab9b97cf898c0f63f899ac0551e",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-42948113334-1"
+    },
+    {
+      "id": "free-42948113334-1-comedy_fail_01",
+      "title": "Comedy Fail",
+      "context": "comedy",
+      "description": "Descending synth joke/fail response",
+      "duration_seconds": 1.15,
+      "date_wib": "2026-11-11",
+      "url": "library/audio/2026-11-11/42948113334-1/comedy_fail_01.wav",
+      "sha256": "af17005f2d317a74e4fd6bc802ca4fdb9f686587d8bbf32cab5716f3f81ca70c",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-42948113334-1"
+    },
+    {
+      "id": "free-42948113334-1-drama_radio_tune_01",
+      "title": "Drama Radio Tune",
+      "context": "audio_drama",
+      "description": "Stylized radio dial/noise cue for audio drama",
+      "duration_seconds": 1.4,
+      "date_wib": "2026-11-11",
+      "url": "library/audio/2026-11-11/42948113334-1/drama_radio_tune_01.wav",
+      "sha256": "d09ce5af840065363f503967ad549edf2a071c4b003c949bd76eff426214e9ad",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-42948113334-1"
+    },
     {
       "id": "free-42744824418-1-cinematic_hit_01",
       "title": "Cinematic Hit",
