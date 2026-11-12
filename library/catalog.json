@@ -1,7 +1,43 @@
 {
   "version": 1,
-  "updated_at": "2026-11-11T06:23:07+00:00",
+  "updated_at": "2026-11-12T06:26:04+00:00",
   "sounds": [
+    {
+      "id": "free-43143646687-1-drama_heartbeat_01",
+      "title": "Drama Heartbeat",
+      "context": "audio_drama",
+      "description": "Stylized heartbeat pulse to signal apprehension",
+      "duration_seconds": 1.8,
+      "date_wib": "2026-11-12",
+      "url": "library/audio/2026-11-12/43143646687-1/drama_heartbeat_01.wav",
+      "sha256": "cc5402d2b70193d3ef845ea678e34de21c6d9835dd313e52bd9c03ff65945d34",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-43143646687-1"
+    },
+    {
+      "id": "free-43143646687-1-short_transition_01",
+      "title": "Short Transition",
+      "context": "shortform",
+      "description": "Quick text reveal and shot transition cue",
+      "duration_seconds": 0.7,
+      "date_wib": "2026-11-12",
+      "url": "library/audio/2026-11-12/43143646687-1/short_transition_01.wav",
+      "sha256": "f2583ceeaa9cfafa827db386856e7669367a612abf5074e370eb8890dfd7ea72",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-43143646687-1"
+    },
+    {
+      "id": "free-43143646687-1-drama_mystery_drone_01",
+      "title": "Drama Mystery Drone",
+      "context": "audio_drama",
+      "description": "Low atmospheric suspense texture, synthetic not location Foley",
+      "duration_seconds": 2.5,
+      "date_wib": "2026-11-12",
+      "url": "library/audio/2026-11-12/43143646687-1/drama_mystery_drone_01.wav",
+      "sha256": "793af0e971109d343d9e45dcc58aef8941ce6d965f9e6f40a187f11f9918ecaf",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-43143646687-1"
+    },
     {
       "id": "free-42948113334-1-ad_shimmer_01",
       "title": "Ad Shimmer",
