@@ -1,7 +1,43 @@
 {
   "version": 1,
-  "updated_at": "2026-11-12T06:26:04+00:00",
+  "updated_at": "2026-11-13T06:23:56+00:00",
   "sounds": [
+    {
+      "id": "free-43354097365-1-short_tension_tick_01",
+      "title": "Short Tension Tick",
+      "context": "shortform",
+      "description": "Dry tick to pace short-form tension or countdown",
+      "duration_seconds": 0.5,
+      "date_wib": "2026-11-13",
+      "url": "library/audio/2026-11-13/43354097365-1/short_tension_tick_01.wav",
+      "sha256": "c49c7b8b6d1d62b966fac3293d313000c618a6b60addf9ff38804753d0bb58da",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-43354097365-1"
+    },
+    {
+      "id": "free-43354097365-1-cinematic_hit_01",
+      "title": "Cinematic Hit",
+      "context": "cinematic",
+      "description": "Low-end cinematic strike for cuts and trailer accents",
+      "duration_seconds": 1.2,
+      "date_wib": "2026-11-13",
+      "url": "library/audio/2026-11-13/43354097365-1/cinematic_hit_01.wav",
+      "sha256": "6994fedf33375d12f010dabdab2f789d4e7f5dfff497575494b48a80f72a06be",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-43354097365-1"
+    },
+    {
+      "id": "free-43354097365-1-drama_heartbeat_01",
+      "title": "Drama Heartbeat",
+      "context": "audio_drama",
+      "description": "Stylized heartbeat pulse to signal apprehension",
+      "duration_seconds": 1.8,
+      "date_wib": "2026-11-13",
+      "url": "library/audio/2026-11-13/43354097365-1/drama_heartbeat_01.wav",
+      "sha256": "a09ff2e790c2b93873379cb6a5564b9da4fa047c9403e4124ee57141a1c43850",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-43354097365-1"
+    },
     {
       "id": "free-43143646687-1-drama_heartbeat_01",
       "title": "Drama Heartbeat",
