@@ -1,7 +1,43 @@
 {
   "version": 1,
-  "updated_at": "2026-11-14T06:12:42+00:00",
+  "updated_at": "2026-11-15T06:16:40+00:00",
   "sounds": [
+    {
+      "id": "free-43669290973-1-short_tension_tick_01",
+      "title": "Short Tension Tick",
+      "context": "shortform",
+      "description": "Dry tick to pace short-form tension or countdown",
+      "duration_seconds": 0.5,
+      "date_wib": "2026-11-15",
+      "url": "library/audio/2026-11-15/43669290973-1/short_tension_tick_01.wav",
+      "sha256": "c2360cc9649f74430faad74b0018d636996ebcaebaef265623e040e2cc299930",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-43669290973-1"
+    },
+    {
+      "id": "free-43669290973-1-comedy_fail_01",
+      "title": "Comedy Fail",
+      "context": "comedy",
+      "description": "Descending synth joke/fail response",
+      "duration_seconds": 1.15,
+      "date_wib": "2026-11-15",
+      "url": "library/audio/2026-11-15/43669290973-1/comedy_fail_01.wav",
+      "sha256": "897aa71a53248d57be894b7fe6a10201f79aac3a26d3a9e134ae8edb51470ca6",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-43669290973-1"
+    },
+    {
+      "id": "free-43669290973-1-horror_stinger_01",
+      "title": "Horror Stinger",
+      "context": "cinematic",
+      "description": "Dissonant synthetic jolt for genre fiction",
+      "duration_seconds": 1.35,
+      "date_wib": "2026-11-15",
+      "url": "library/audio/2026-11-15/43669290973-1/horror_stinger_01.wav",
+      "sha256": "ebc0aafc313ae46dbbc6298f2d6b3bbf66467cfc5a6c7a24a6db40012e4dcb9e",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-43669290973-1"
+    },
     {
       "id": "free-43547996771-1-drama_heartbeat_01",
       "title": "Drama Heartbeat",
