@@ -1,7 +1,43 @@
 {
   "version": 1,
-  "updated_at": "2026-11-16T07:00:42+00:00",
+  "updated_at": "2026-11-17T06:25:09+00:00",
   "sounds": [
+    {
+      "id": "free-44005746012-1-comedy_fail_01",
+      "title": "Comedy Fail",
+      "context": "comedy",
+      "description": "Descending synth joke/fail response",
+      "duration_seconds": 1.15,
+      "date_wib": "2026-11-17",
+      "url": "library/audio/2026-11-17/44005746012-1/comedy_fail_01.wav",
+      "sha256": "bc67ef1add900a66cf4e56a56a1e4b33bb5d31401343d3fa0a3395e953001fea",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-44005746012-1"
+    },
+    {
+      "id": "free-44005746012-1-short_tension_tick_01",
+      "title": "Short Tension Tick",
+      "context": "shortform",
+      "description": "Dry tick to pace short-form tension or countdown",
+      "duration_seconds": 0.5,
+      "date_wib": "2026-11-17",
+      "url": "library/audio/2026-11-17/44005746012-1/short_tension_tick_01.wav",
+      "sha256": "e21add2a27c365df0100b66e917da6803a4aef1f3f1e5e0b946d64a2d22892e3",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-44005746012-1"
+    },
+    {
+      "id": "free-44005746012-1-drama_radio_tune_01",
+      "title": "Drama Radio Tune",
+      "context": "audio_drama",
+      "description": "Stylized radio dial/noise cue for audio drama",
+      "duration_seconds": 1.4,
+      "date_wib": "2026-11-17",
+      "url": "library/audio/2026-11-17/44005746012-1/drama_radio_tune_01.wav",
+      "sha256": "96b36205cec3db13e2c69e32440138d18eed04410bf7c6772ce5c162ed0087ec",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-44005746012-1"
+    },
     {
       "id": "free-43794579508-1-short_transition_01",
       "title": "Short Transition",
