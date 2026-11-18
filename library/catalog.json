@@ -1,7 +1,43 @@
 {
   "version": 1,
-  "updated_at": "2026-11-17T06:25:09+00:00",
+  "updated_at": "2026-11-18T06:27:30+00:00",
   "sounds": [
+    {
+      "id": "free-44225802931-1-game_reward_01",
+      "title": "Game Reward",
+      "context": "gaming",
+      "description": "Arcade-style reward confirmation, layered tones",
+      "duration_seconds": 1.1,
+      "date_wib": "2026-11-18",
+      "url": "library/audio/2026-11-18/44225802931-1/game_reward_01.wav",
+      "sha256": "9e05f97d912d42f58d85e4fef3322239cd06c0ccb2e6a0562e3d47793c7ffea2",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-44225802931-1"
+    },
+    {
+      "id": "free-44225802931-1-drama_heartbeat_01",
+      "title": "Drama Heartbeat",
+      "context": "audio_drama",
+      "description": "Stylized heartbeat pulse to signal apprehension",
+      "duration_seconds": 1.8,
+      "date_wib": "2026-11-18",
+      "url": "library/audio/2026-11-18/44225802931-1/drama_heartbeat_01.wav",
+      "sha256": "aa61cb18012bf4185bed6f5113aa7dfaa53a8210b00e2986ff98da5fb0cf9444",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-44225802931-1"
+    },
+    {
+      "id": "free-44225802931-1-short_transition_01",
+      "title": "Short Transition",
+      "context": "shortform",
+      "description": "Quick text reveal and shot transition cue",
+      "duration_seconds": 0.7,
+      "date_wib": "2026-11-18",
+      "url": "library/audio/2026-11-18/44225802931-1/short_transition_01.wav",
+      "sha256": "286e4d79515c81db0319bddcbc4eaaa28abf12992ce8e105e9d09a6e06f3be51",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-44225802931-1"
+    },
     {
       "id": "free-44005746012-1-comedy_fail_01",
       "title": "Comedy Fail",
