@@ -1,7 +1,43 @@
 {
   "version": 1,
-  "updated_at": "2026-11-18T06:27:30+00:00",
+  "updated_at": "2026-11-19T06:24:24+00:00",
   "sounds": [
+    {
+      "id": "free-44446928296-1-short_tension_tick_01",
+      "title": "Short Tension Tick",
+      "context": "shortform",
+      "description": "Dry tick to pace short-form tension or countdown",
+      "duration_seconds": 0.5,
+      "date_wib": "2026-11-19",
+      "url": "library/audio/2026-11-19/44446928296-1/short_tension_tick_01.wav",
+      "sha256": "a90647c1e9deae3301116f1b530a6191c0a85b852cfd0f257a8ccaebd246ae78",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-44446928296-1"
+    },
+    {
+      "id": "free-44446928296-1-horror_stinger_01",
+      "title": "Horror Stinger",
+      "context": "cinematic",
+      "description": "Dissonant synthetic jolt for genre fiction",
+      "duration_seconds": 1.35,
+      "date_wib": "2026-11-19",
+      "url": "library/audio/2026-11-19/44446928296-1/horror_stinger_01.wav",
+      "sha256": "bea5adc2c951dd89092cf61c1018fe084ab22c16c8acedd889c11c91553d0b8b",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-44446928296-1"
+    },
+    {
+      "id": "free-44446928296-1-drama_radio_tune_01",
+      "title": "Drama Radio Tune",
+      "context": "audio_drama",
+      "description": "Stylized radio dial/noise cue for audio drama",
+      "duration_seconds": 1.4,
+      "date_wib": "2026-11-19",
+      "url": "library/audio/2026-11-19/44446928296-1/drama_radio_tune_01.wav",
+      "sha256": "e42aee8411684f8b10020a62c37de95a52c24c9fbe64963669722c3237134ef9",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-44446928296-1"
+    },
     {
       "id": "free-44225802931-1-game_reward_01",
       "title": "Game Reward",
