@@ -1,7 +1,43 @@
 {
   "version": 1,
-  "updated_at": "2026-11-19T06:24:24+00:00",
+  "updated_at": "2026-11-20T06:27:02+00:00",
   "sounds": [
+    {
+      "id": "free-44663321774-1-short_transition_01",
+      "title": "Short Transition",
+      "context": "shortform",
+      "description": "Quick text reveal and shot transition cue",
+      "duration_seconds": 0.7,
+      "date_wib": "2026-11-20",
+      "url": "library/audio/2026-11-20/44663321774-1/short_transition_01.wav",
+      "sha256": "de54cfea1b214706fd31fca2fcb47087dd6aadf8675e91223b034ff0a91367cc",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-44663321774-1"
+    },
+    {
+      "id": "free-44663321774-1-game_reward_01",
+      "title": "Game Reward",
+      "context": "gaming",
+      "description": "Arcade-style reward confirmation, layered tones",
+      "duration_seconds": 1.1,
+      "date_wib": "2026-11-20",
+      "url": "library/audio/2026-11-20/44663321774-1/game_reward_01.wav",
+      "sha256": "b4ae138480a2edc055d0f4b398435654ee26d05da849d5530f441ee8b8b2ed92",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-44663321774-1"
+    },
+    {
+      "id": "free-44663321774-1-drama_mystery_drone_01",
+      "title": "Drama Mystery Drone",
+      "context": "audio_drama",
+      "description": "Low atmospheric suspense texture, synthetic not location Foley",
+      "duration_seconds": 2.5,
+      "date_wib": "2026-11-20",
+      "url": "library/audio/2026-11-20/44663321774-1/drama_mystery_drone_01.wav",
+      "sha256": "52cfb68517aa592cb27d320193caa0a381df867b0d1e6b9a148de75523ba3598",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-44663321774-1"
+    },
     {
       "id": "free-44446928296-1-short_tension_tick_01",
       "title": "Short Tension Tick",
