@@ -1,7 +1,43 @@
 {
   "version": 1,
-  "updated_at": "2026-11-20T06:27:02+00:00",
+  "updated_at": "2026-11-21T06:20:55+00:00",
   "sounds": [
+    {
+      "id": "free-44857703378-1-drama_heartbeat_01",
+      "title": "Drama Heartbeat",
+      "context": "audio_drama",
+      "description": "Stylized heartbeat pulse to signal apprehension",
+      "duration_seconds": 1.8,
+      "date_wib": "2026-11-21",
+      "url": "library/audio/2026-11-21/44857703378-1/drama_heartbeat_01.wav",
+      "sha256": "a61955a3dba7da68d12fc94bd50b501b7516a42436d9a28f47f14f4d7380c7c4",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-44857703378-1"
+    },
+    {
+      "id": "free-44857703378-1-ad_soft_chime_01",
+      "title": "Ad Soft Chime",
+      "context": "commercial",
+      "description": "Clean success chime for branded UX",
+      "duration_seconds": 0.9,
+      "date_wib": "2026-11-21",
+      "url": "library/audio/2026-11-21/44857703378-1/ad_soft_chime_01.wav",
+      "sha256": "2e905f960bbb314e8dddb716ad16f83bbf2d78aecd7c18c6049062f7abd1b395",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-44857703378-1"
+    },
+    {
+      "id": "free-44857703378-1-short_glitch_cut_01",
+      "title": "Short Glitch Cut",
+      "context": "shortform",
+      "description": "Digital glitch snap for glitch cut editing",
+      "duration_seconds": 0.5,
+      "date_wib": "2026-11-21",
+      "url": "library/audio/2026-11-21/44857703378-1/short_glitch_cut_01.wav",
+      "sha256": "f66c876dba6e635670ff7a8d92a6eb8c372fcf2d80273aef89f5feb96bebd785",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-44857703378-1"
+    },
     {
       "id": "free-44663321774-1-short_transition_01",
       "title": "Short Transition",
