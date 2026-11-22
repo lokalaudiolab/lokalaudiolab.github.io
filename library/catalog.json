@@ -1,7 +1,43 @@
 {
   "version": 1,
-  "updated_at": "2026-11-21T06:20:55+00:00",
+  "updated_at": "2026-11-22T06:20:26+00:00",
   "sounds": [
+    {
+      "id": "free-44977852624-1-short_transition_01",
+      "title": "Short Transition",
+      "context": "shortform",
+      "description": "Quick text reveal and shot transition cue",
+      "duration_seconds": 0.7,
+      "date_wib": "2026-11-22",
+      "url": "library/audio/2026-11-22/44977852624-1/short_transition_01.wav",
+      "sha256": "bce41b4b5dd0ed9353620526da047a708db769267d7de39692318b4be22ea213",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-44977852624-1"
+    },
+    {
+      "id": "free-44977852624-1-game_reward_01",
+      "title": "Game Reward",
+      "context": "gaming",
+      "description": "Arcade-style reward confirmation, layered tones",
+      "duration_seconds": 1.1,
+      "date_wib": "2026-11-22",
+      "url": "library/audio/2026-11-22/44977852624-1/game_reward_01.wav",
+      "sha256": "51750c8540f7a0c2cc13586a20d9ecee25dcbed11db4c6738ef4e0a94e6494a0",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-44977852624-1"
+    },
+    {
+      "id": "free-44977852624-1-drama_mystery_drone_01",
+      "title": "Drama Mystery Drone",
+      "context": "audio_drama",
+      "description": "Low atmospheric suspense texture, synthetic not location Foley",
+      "duration_seconds": 2.5,
+      "date_wib": "2026-11-22",
+      "url": "library/audio/2026-11-22/44977852624-1/drama_mystery_drone_01.wav",
+      "sha256": "3b1aa1c62bc02757f023f4b097e0f360d93219a9f929052a3e3045add8c28326",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-44977852624-1"
+    },
     {
       "id": "free-44857703378-1-drama_heartbeat_01",
       "title": "Drama Heartbeat",
