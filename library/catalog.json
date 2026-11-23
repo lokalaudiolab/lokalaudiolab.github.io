@@ -1,7 +1,43 @@
 {
   "version": 1,
-  "updated_at": "2026-11-22T06:20:26+00:00",
+  "updated_at": "2026-11-23T06:34:13+00:00",
   "sounds": [
+    {
+      "id": "free-45102757611-1-ad_soft_chime_01",
+      "title": "Ad Soft Chime",
+      "context": "commercial",
+      "description": "Clean success chime for branded UX",
+      "duration_seconds": 0.9,
+      "date_wib": "2026-11-23",
+      "url": "library/audio/2026-11-23/45102757611-1/ad_soft_chime_01.wav",
+      "sha256": "fddcff3a5cbf508a3cfd5b5f5c689f0d0f1557989214629b834c79d252b6ad3d",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-45102757611-1"
+    },
+    {
+      "id": "free-45102757611-1-horror_stinger_01",
+      "title": "Horror Stinger",
+      "context": "cinematic",
+      "description": "Dissonant synthetic jolt for genre fiction",
+      "duration_seconds": 1.35,
+      "date_wib": "2026-11-23",
+      "url": "library/audio/2026-11-23/45102757611-1/horror_stinger_01.wav",
+      "sha256": "f2e78a9bee077e9c645fc8ac39b2399b10f30a2789c5c344a066847a75d820aa",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-45102757611-1"
+    },
+    {
+      "id": "free-45102757611-1-short_glitch_cut_01",
+      "title": "Short Glitch Cut",
+      "context": "shortform",
+      "description": "Digital glitch snap for glitch cut editing",
+      "duration_seconds": 0.5,
+      "date_wib": "2026-11-23",
+      "url": "library/audio/2026-11-23/45102757611-1/short_glitch_cut_01.wav",
+      "sha256": "deb86a1f2e7d5d0db362db6072dc48addced34371e388b4e316f302a009ceb42",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-45102757611-1"
+    },
     {
       "id": "free-44977852624-1-short_transition_01",
       "title": "Short Transition",
