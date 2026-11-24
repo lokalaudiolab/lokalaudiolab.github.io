@@ -1,7 +1,43 @@
 {
   "version": 1,
-  "updated_at": "2026-11-23T06:34:13+00:00",
+  "updated_at": "2026-11-24T06:21:22+00:00",
   "sounds": [
+    {
+      "id": "free-45315458568-1-ad_shimmer_01",
+      "title": "Ad Shimmer",
+      "context": "commercial",
+      "description": "Sparkly brand logo sparkle accent",
+      "duration_seconds": 1.4,
+      "date_wib": "2026-11-24",
+      "url": "library/audio/2026-11-24/45315458568-1/ad_shimmer_01.wav",
+      "sha256": "f48855b4c63729afee85edfd0811ae376b25ebb24f960d7323e201774cd41da2",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-45315458568-1"
+    },
+    {
+      "id": "free-45315458568-1-comedy_bonk_01",
+      "title": "Comedy Bonk",
+      "context": "comedy",
+      "description": "Cartoon bonk for slapstick reactions",
+      "duration_seconds": 0.42,
+      "date_wib": "2026-11-24",
+      "url": "library/audio/2026-11-24/45315458568-1/comedy_bonk_01.wav",
+      "sha256": "26f4068aea9bb96275b7346886ecd1d14027e417b5b8f3d93dac8e1cb1a7e74b",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-45315458568-1"
+    },
+    {
+      "id": "free-45315458568-1-game_reward_01",
+      "title": "Game Reward",
+      "context": "gaming",
+      "description": "Arcade-style reward confirmation, layered tones",
+      "duration_seconds": 1.1,
+      "date_wib": "2026-11-24",
+      "url": "library/audio/2026-11-24/45315458568-1/game_reward_01.wav",
+      "sha256": "3f64023affede25d692ac8f2b869049a90bba531fa677703e4808c6bd451b79e",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-45315458568-1"
+    },
     {
       "id": "free-45102757611-1-ad_soft_chime_01",
       "title": "Ad Soft Chime",
