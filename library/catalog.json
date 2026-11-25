@@ -1,7 +1,43 @@
 {
   "version": 1,
-  "updated_at": "2026-11-24T06:21:22+00:00",
+  "updated_at": "2026-11-25T06:22:22+00:00",
   "sounds": [
+    {
+      "id": "free-45536084760-1-drama_heartbeat_01",
+      "title": "Drama Heartbeat",
+      "context": "audio_drama",
+      "description": "Stylized heartbeat pulse to signal apprehension",
+      "duration_seconds": 1.8,
+      "date_wib": "2026-11-25",
+      "url": "library/audio/2026-11-25/45536084760-1/drama_heartbeat_01.wav",
+      "sha256": "1dc40d0fe0c014a20d4c9faf1e6e1d4e44125577b924cbcd53d5bde88f8d7e01",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-45536084760-1"
+    },
+    {
+      "id": "free-45536084760-1-ad_soft_chime_01",
+      "title": "Ad Soft Chime",
+      "context": "commercial",
+      "description": "Clean success chime for branded UX",
+      "duration_seconds": 0.9,
+      "date_wib": "2026-11-25",
+      "url": "library/audio/2026-11-25/45536084760-1/ad_soft_chime_01.wav",
+      "sha256": "2c08c3c16eb116741e25b11499e4011b3a91f2d5141f183407f3e079b130108c",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-45536084760-1"
+    },
+    {
+      "id": "free-45536084760-1-horror_stinger_01",
+      "title": "Horror Stinger",
+      "context": "cinematic",
+      "description": "Dissonant synthetic jolt for genre fiction",
+      "duration_seconds": 1.35,
+      "date_wib": "2026-11-25",
+      "url": "library/audio/2026-11-25/45536084760-1/horror_stinger_01.wav",
+      "sha256": "f82b1097394bcc8a186b9c40c037bb54f3606f32b04f40a647f44cce0a6583b7",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-45536084760-1"
+    },
     {
       "id": "free-45315458568-1-ad_shimmer_01",
       "title": "Ad Shimmer",
