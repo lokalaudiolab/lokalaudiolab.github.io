@@ -1,7 +1,43 @@
 {
   "version": 1,
-  "updated_at": "2026-11-27T06:25:58+00:00",
+  "updated_at": "2026-11-28T06:24:02+00:00",
   "sounds": [
+    {
+      "id": "free-46099872028-1-comedy_bonk_01",
+      "title": "Comedy Bonk",
+      "context": "comedy",
+      "description": "Cartoon bonk for slapstick reactions",
+      "duration_seconds": 0.42,
+      "date_wib": "2026-11-28",
+      "url": "library/audio/2026-11-28/46099872028-1/comedy_bonk_01.wav",
+      "sha256": "c5d2a937cb82707a928690baaa79f70cb5e543c17674b0f49cba44275cd87402",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-46099872028-1"
+    },
+    {
+      "id": "free-46099872028-1-short_tension_tick_01",
+      "title": "Short Tension Tick",
+      "context": "shortform",
+      "description": "Dry tick to pace short-form tension or countdown",
+      "duration_seconds": 0.5,
+      "date_wib": "2026-11-28",
+      "url": "library/audio/2026-11-28/46099872028-1/short_tension_tick_01.wav",
+      "sha256": "dde35cd6ca271e13dabe41baf974708d2b4f8aa4ee204355711c84cbf7e48ad8",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-46099872028-1"
+    },
+    {
+      "id": "free-46099872028-1-ad_shimmer_01",
+      "title": "Ad Shimmer",
+      "context": "commercial",
+      "description": "Sparkly brand logo sparkle accent",
+      "duration_seconds": 1.4,
+      "date_wib": "2026-11-28",
+      "url": "library/audio/2026-11-28/46099872028-1/ad_shimmer_01.wav",
+      "sha256": "ab26448e5aa7d076e0a9b988e05ae7c02377500778c3a4c167662bd35e6fe71b",
+      "tier": "FREE_DEMO",
+      "source_release": "sfx-46099872028-1"
+    },
     {
       "id": "free-45930946555-1-horror_stinger_01",
       "title": "Horror Stinger",
